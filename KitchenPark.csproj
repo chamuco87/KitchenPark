@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15E6FA7C-7B12-4DEC-809A-ADB30526E88A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KitchenPark</RootNamespace>
+    <AssemblyName>KitchenPark</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44362</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\QueenDeliveryController.cs" />
+    <Compile Include="Controllers\CaramelCoffeeController.cs" />
+    <Compile Include="Controllers\TheBBQBrosController.cs" />
+    <Compile Include="Controllers\JimJimController.cs" />
+    <Compile Include="Controllers\LosJemosController.cs" />
+    <Compile Include="Controllers\MrBeefController.cs" />
+    <Compile Include="Controllers\TacosP11Controller.cs" />
+    <Compile Include="Controllers\LaCapitalMXController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\blog.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\contacts.css" />
+    <Content Include="Content\custom.css" />
+    <Content Include="Content\detail-page.css" />
+    <Content Include="Content\error.css" />
+    <Content Include="Content\help.css" />
+    <Content Include="Content\home.css" />
+    <Content Include="Content\icons.css" />
+    <Content Include="Content\icons.min.css" />
+    <Content Include="Content\icon_fonts\font\ElegantIcons.svg" />
+    <Content Include="Content\icon_fonts\font\food.svg" />
+    <Content Include="Content\icon_fonts\font\Glyphter.svg" />
+    <Content Include="Content\images\Restaurants\BBQBros\1.jpg" />
+    <Content Include="Content\images\Restaurants\BBQBros\2.jpg" />
+    <Content Include="Content\images\Restaurants\BBQBros\3.jpg" />
+    <Content Include="Content\images\Restaurants\BBQBros\4.jpg" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\Logo.jpg" />
+    <Content Include="Content\images\Restaurants\BBQBros\menu1.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\menu2.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\Promociones.jpg" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\bg1-8.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\bg2-8.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\bg3-8.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\logo.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\promo.jpeg" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\WebMenu1-8.png" />
+    <Content Include="Content\images\Restaurants\JimJim\1.jpg" />
+    <Content Include="Content\images\Restaurants\JimJim\2.JPG" />
+    <Content Include="Content\images\Restaurants\JimJim\3.jpg" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\JimJim\logo.png" />
+    <Content Include="Content\images\Restaurants\JimJim\menu1.png" />
+    <Content Include="Content\images\Restaurants\JimJim\menu2.png" />
+    <Content Include="Content\images\Restaurants\JimJim\menu3.png" />
+    <Content Include="Content\images\Restaurants\JimJim\promo14.jpeg" />
+    <Content Include="Content\images\Restaurants\JimJim\promosem1.jpeg" />
+    <Content Include="Content\images\Restaurants\KitchenPark\android-chrome-192x192.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\android-chrome-512x512.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\apple-touch-icon.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\favicon.ico" />
+    <Content Include="Content\images\Restaurants\KitchenPark\LOGO BLNAOC.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\LogoColor.svg" />
+    <Content Include="Content\images\Restaurants\KitchenPark\mstile-150x150.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\14feb.mp4" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 1.svg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 2.svg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 3.svg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Chilaquiles-8.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Cubana-8.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Enchiladas.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Logo.jpg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Logo.svg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\menu1.jpg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\menu2.jpg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\menu3.jpg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\promotion1.jpg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\promotion2.jpg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Tamales-8.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\1.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\2.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\3.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\4.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\logo.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\Menu.jpg" />
+    <Content Include="Content\images\Restaurants\LosJemos\Menu2.jpg" />
+    <Content Include="Content\images\Restaurants\LosJemos\Menu3.jpg" />
+    <Content Include="Content\images\Restaurants\LosJemos\Promo1.jpeg" />
+    <Content Include="Content\images\Restaurants\LosJemos\Promo2.jpeg" />
+    <Content Include="Content\images\Restaurants\MrBeef\1.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\2.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\3.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\4.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\logo.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\menu1.jpeg" />
+    <Content Include="Content\images\Restaurants\MrBeef\menu2.jpeg" />
+    <Content Include="Content\images\Restaurants\MrBeef\menumobile.jpg" />
+    <Content Include="Content\images\Restaurants\MrBeef\Promo1.jpeg" />
+    <Content Include="Content\images\Restaurants\MrBeef\Promo2.jpeg" />
+    <Content Include="Content\images\Restaurants\MrBeef\promosem.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\1.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\2.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\3.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\4.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\5.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\logo.jpg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\menu1.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\menu2.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\menu3.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\menu4.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\menu5.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promo.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promo1.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promo2.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promo3.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promo4.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promo5.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promosem1.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promosem2.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promosem3.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promosem4.jpeg" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\promosem5.jpeg" />
+    <Content Include="Content\images\Restaurants\TacosP11\1.jpeg" />
+    <Content Include="Content\images\Restaurants\TacosP11\2.jpeg" />
+    <Content Include="Content\images\Restaurants\TacosP11\3.jpeg" />
+    <Content Include="Content\images\Restaurants\TacosP11\4.jpeg" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\logo.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\MenuP11.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\promo.jpeg" />
+    <Content Include="Content\images\Restaurants\TacosP11\promosem.jpeg" />
+    <Content Include="Content\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\images\wa.png" />
+    <Content Include="Content\img\404.svg" />
+    <Content Include="Content\img\about_1.svg" />
+    <Content Include="Content\img\about_2.svg" />
+    <Content Include="Content\img\about_3.svg" />
+    <Content Include="Content\img\access_bg.jpg" />
+    <Content Include="Content\img\apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="Content\img\apple-touch-icon-144x144-precomposed.png" />
+    <Content Include="Content\img\apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="Content\img\apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="Content\img\appstore.svg" />
+    <Content Include="Content\img\appstore_dark.png" />
+    <Content Include="Content\img\app_android.svg" />
+    <Content Include="Content\img\app_apple.svg" />
+    <Content Include="Content\img\arrow_about.png" />
+    <Content Include="Content\img\arrow_down.svg" />
+    <Content Include="Content\img\avatar-placeholder.jpg" />
+    <Content Include="Content\img\avatar.jpg" />
+    <Content Include="Content\img\avatar1.jpg" />
+    <Content Include="Content\img\avatar4.jpg" />
+    <Content Include="Content\img\avatar6.jpg" />
+    <Content Include="Content\img\avatar_1.svg" />
+    <Content Include="Content\img\avatar_2.svg" />
+    <Content Include="Content\img\avatar_3.svg" />
+    <Content Include="Content\img\banner_bg_desktop.jpg" />
+    <Content Include="Content\img\bg_call_section.jpg" />
+    <Content Include="Content\img\bg_call_section_2.jpg" />
+    <Content Include="Content\img\blog-1.jpg" />
+    <Content Include="Content\img\blog-2.jpg" />
+    <Content Include="Content\img\blog-3.jpg" />
+    <Content Include="Content\img\blog-4.jpg" />
+    <Content Include="Content\img\blog-5.jpg" />
+    <Content Include="Content\img\blog-6.jpg" />
+    <Content Include="Content\img\blog-single.jpg" />
+    <Content Include="Content\img\camera.svg" />
+    <Content Include="Content\img\cards_all.svg" />
+    <Content Include="Content\img\cat_listing_1.jpg" />
+    <Content Include="Content\img\cat_listing_2.jpg" />
+    <Content Include="Content\img\cat_listing_3.jpg" />
+    <Content Include="Content\img\cat_listing_4.jpg" />
+    <Content Include="Content\img\cat_listing_5.jpg" />
+    <Content Include="Content\img\cat_listing_6.jpg" />
+    <Content Include="Content\img\cat_listing_7.jpg" />
+    <Content Include="Content\img\cat_listing_8.jpg" />
+    <Content Include="Content\img\cat_listing_placeholder.png" />
+    <Content Include="Content\img\close_infobox.png" />
+    <Content Include="Content\img\credit-cards_amazon.svg" />
+    <Content Include="Content\img\credit-cards_amex.svg" />
+    <Content Include="Content\img\credit-cards_apple-pay.svg" />
+    <Content Include="Content\img\credit-cards_bitcoin.svg" />
+    <Content Include="Content\img\credit-cards_diners-club.svg" />
+    <Content Include="Content\img\credit-cards_discover.svg" />
+    <Content Include="Content\img\credit-cards_maestro.svg" />
+    <Content Include="Content\img\credit-cards_mastercard.svg" />
+    <Content Include="Content\img\credit-cards_paypal.svg" />
+    <Content Include="Content\img\credit-cards_visa.svg" />
+    <Content Include="Content\img\detail_1.jpg" />
+    <Content Include="Content\img\detail_2.jpg" />
+    <Content Include="Content\img\detail_3.jpg" />
+    <Content Include="Content\img\detail_gallery\detail_1.jpg" />
+    <Content Include="Content\img\detail_gallery\detail_2.jpg" />
+    <Content Include="Content\img\detail_gallery\detail_3.jpg" />
+    <Content Include="Content\img\detail_gallery\detail_4.jpg" />
+    <Content Include="Content\img\detail_gallery\detail_5.jpg" />
+    <Content Include="Content\img\drag_icon.svg" />
+    <Content Include="Content\img\facebook_icon.svg" />
+    <Content Include="Content\img\Facebook__logo.svg" />
+    <Content Include="Content\img\favicon.ico" />
+    <Content Include="Content\img\googlestore.svg" />
+    <Content Include="Content\img\googlestore_dark.png" />
+    <Content Include="Content\img\Google__G__Logo.svg" />
+    <Content Include="Content\img\hero_5.svg" />
+    <Content Include="Content\img\hero_5_mobile.svg" />
+    <Content Include="Content\img\hero_general.jpg" />
+    <Content Include="Content\img\hero_general_2.jpg" />
+    <Content Include="Content\img\hero_in_restaurants_detail.jpg" />
+    <Content Include="Content\img\hero_submit.jpg" />
+    <Content Include="Content\img\hero_submit_2.jpg" />
+    <Content Include="Content\img\home_cat_bakery.jpg" />
+    <Content Include="Content\img\home_cat_chinesse.jpg" />
+    <Content Include="Content\img\home_cat_hamburgher.jpg" />
+    <Content Include="Content\img\home_cat_mexican.jpg" />
+    <Content Include="Content\img\home_cat_pizza.jpg" />
+    <Content Include="Content\img\home_cat_placeholder.jpg" />
+    <Content Include="Content\img\home_cat_sushi.jpg" />
+    <Content Include="Content\img\home_cat_vegetarian.jpg" />
+    <Content Include="Content\img\home_section_1.jpg" />
+    <Content Include="Content\img\home_section_2.jpg" />
+    <Content Include="Content\img\how_1.svg" />
+    <Content Include="Content\img\how_2.svg" />
+    <Content Include="Content\img\how_3.svg" />
+    <Content Include="Content\img\icon_burgher_list.svg" />
+    <Content Include="Content\img\icon_ccv.gif" />
+    <Content Include="Content\img\icon_chinese_list.svg" />
+    <Content Include="Content\img\icon_submit_1.svg" />
+    <Content Include="Content\img\icon_submit_2.svg" />
+    <Content Include="Content\img\icon_submit_3.svg" />
+    <Content Include="Content\img\img_cat_home_1.jpg" />
+    <Content Include="Content\img\img_cat_home_2.jpg" />
+    <Content Include="Content\img\img_cat_home_3.jpg" />
+    <Content Include="Content\img\img_cat_home_4.jpg" />
+    <Content Include="Content\img\img_cat_home_placeholder.png" />
+    <Content Include="Content\img\instagram_icon.svg" />
+    <Content Include="Content\img\item_square_small_1.jpg" />
+    <Content Include="Content\img\lazy-placeholder-100-100-white.png" />
+    <Content Include="Content\img\lazy-placeholder-600-400.png" />
+    <Content Include="Content\img\lazy-placeholder.jpg" />
+    <Content Include="Content\img\lazy-placeholder.png" />
+    <Content Include="Content\img\location_1.jpg" />
+    <Content Include="Content\img\location_10.jpg" />
+    <Content Include="Content\img\location_11.jpg" />
+    <Content Include="Content\img\location_12.jpg" />
+    <Content Include="Content\img\location_2.jpg" />
+    <Content Include="Content\img\location_3.jpg" />
+    <Content Include="Content\img\location_3.png" />
+    <Content Include="Content\img\location_4.jpg" />
+    <Content Include="Content\img\location_5.jpg" />
+    <Content Include="Content\img\location_6.jpg" />
+    <Content Include="Content\img\location_7.jpg" />
+    <Content Include="Content\img\location_8.jpg" />
+    <Content Include="Content\img\location_9.jpg" />
+    <Content Include="Content\img\location_list_1.jpg" />
+    <Content Include="Content\img\location_list_2.jpg" />
+    <Content Include="Content\img\location_list_3.jpg" />
+    <Content Include="Content\img\location_list_4.jpg" />
+    <Content Include="Content\img\location_list_5.jpg" />
+    <Content Include="Content\img\location_list_6.jpg" />
+    <Content Include="Content\img\location_list_placeholder.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\logo_sticky.png" />
+    <Content Include="Content\img\logo_sticky.svg" />
+    <Content Include="Content\img\map-marker.png" />
+    <Content Include="Content\img\map_bt_bg.png" />
+    <Content Include="Content\img\menu-thumb-1.jpg" />
+    <Content Include="Content\img\menu-thumb-10.jpg" />
+    <Content Include="Content\img\menu-thumb-11.jpg" />
+    <Content Include="Content\img\menu-thumb-12.jpg" />
+    <Content Include="Content\img\menu-thumb-13.jpg" />
+    <Content Include="Content\img\menu-thumb-14.jpg" />
+    <Content Include="Content\img\menu-thumb-15.jpg" />
+    <Content Include="Content\img\menu-thumb-16.jpg" />
+    <Content Include="Content\img\menu-thumb-17.jpg" />
+    <Content Include="Content\img\menu-thumb-18.jpg" />
+    <Content Include="Content\img\menu-thumb-19.jpg" />
+    <Content Include="Content\img\menu-thumb-2.jpg" />
+    <Content Include="Content\img\menu-thumb-20.jpg" />
+    <Content Include="Content\img\menu-thumb-21.jpg" />
+    <Content Include="Content\img\menu-thumb-22.jpg" />
+    <Content Include="Content\img\menu-thumb-23.jpg" />
+    <Content Include="Content\img\menu-thumb-24.jpg" />
+    <Content Include="Content\img\menu-thumb-3.jpg" />
+    <Content Include="Content\img\menu-thumb-4.jpg" />
+    <Content Include="Content\img\menu-thumb-5.jpg" />
+    <Content Include="Content\img\menu-thumb-6.jpg" />
+    <Content Include="Content\img\menu-thumb-7.jpg" />
+    <Content Include="Content\img\menu-thumb-8.jpg" />
+    <Content Include="Content\img\menu-thumb-9.jpg" />
+    <Content Include="Content\img\menu-thumb-placeholder.jpg" />
+    <Content Include="Content\img\menu_item_large_1.jpg" />
+    <Content Include="Content\img\menu_item_large_2.jpg" />
+    <Content Include="Content\img\menu_item_large_3.jpg" />
+    <Content Include="Content\img\menu_item_large_4.jpg" />
+    <Content Include="Content\img\minus.png" />
+    <Content Include="Content\img\minus.svg" />
+    <Content Include="Content\img\modal_advertise.png" />
+    <Content Include="Content\img\newsletter_img.jpg" />
+    <Content Include="Content\img\pattern.svg" />
+    <Content Include="Content\img\pattern_1.svg" />
+    <Content Include="Content\img\pattern_2.svg" />
+    <Content Include="Content\img\paypal.svg" />
+    <Content Include="Content\img\paypal_2.svg" />
+    <Content Include="Content\img\pins\Marker.png" />
+    <Content Include="Content\img\pizza_cat_listing.jpg" />
+    <Content Include="Content\img\plus.png" />
+    <Content Include="Content\img\plus.svg" />
+    <Content Include="Content\img\search.svg" />
+    <Content Include="Content\img\shape_element_1.svg" />
+    <Content Include="Content\img\shape_element_2.svg" />
+    <Content Include="Content\img\slides\slide_home_1.jpg" />
+    <Content Include="Content\img\slides\slide_home_2.jpg" />
+    <Content Include="Content\img\slides\slide_home_3.jpg" />
+    <Content Include="Content\img\submit_restaurant_home.jpg" />
+    <Content Include="Content\img\submit_rider_home.jpg" />
+    <Content Include="Content\img\svg_icons\food_icon_1.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_10.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_11.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_12.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_13.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_14.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_15.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_16.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_17.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_18.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_19.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_2.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_20.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_21.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_22.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_23.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_24.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_25.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_26.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_27.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_28.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_29.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_3.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_30.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_31.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_32.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_33.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_34.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_35.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_36.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_37.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_38.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_39.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_4.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_40.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_41.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_42.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_43.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_44.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_45.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_46.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_47.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_48.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_5.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_6.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_7.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_8.svg" />
+    <Content Include="Content\img\svg_icons\food_icon_9.svg" />
+    <Content Include="Content\img\thumb_detail_1.jpg" />
+    <Content Include="Content\img\thumb_detail_2.jpg" />
+    <Content Include="Content\img\thumb_detail_3.jpg" />
+    <Content Include="Content\img\thumb_detail_4.jpg" />
+    <Content Include="Content\img\thumb_detail_5.jpg" />
+    <Content Include="Content\img\thumb_detail_6.jpg" />
+    <Content Include="Content\img\thumb_map_single_restaurant.jpg" />
+    <Content Include="Content\img\twitter_icon.svg" />
+    <Content Include="Content\img\video_fix.png" />
+    <Content Include="Content\img\wave_gray.svg" />
+    <Content Include="Content\img\wave_white.svg" />
+    <Content Include="Content\img\youtube_icon.svg" />
+    <Content Include="Content\leaflet.css" />
+    <Content Include="Content\listing.css" />
+    <Content Include="Content\modal_popup.css" />
+    <Content Include="Content\order-sign_up.css" />
+    <Content Include="Content\overlays\01.png" />
+    <Content Include="Content\overlays\02.png" />
+    <Content Include="Content\overlays\03.png" />
+    <Content Include="Content\overlays\04.png" />
+    <Content Include="Content\overlays\05.png" />
+    <Content Include="Content\overlays\06.png" />
+    <Content Include="Content\overlays\07.png" />
+    <Content Include="Content\overlays\08.png" />
+    <Content Include="Content\overlays\09.png" />
+    <Content Include="Content\review.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\submit.css" />
+    <Content Include="Content\vegas.css" />
+    <Content Include="Content\vegas.min.css" />
+    <Content Include="Content\wizard.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\icon_fonts\font\ElegantIcons.eot" />
+    <Content Include="Content\icon_fonts\font\ElegantIcons.ttf" />
+    <Content Include="Content\icon_fonts\font\ElegantIcons.woff" />
+    <Content Include="Content\icon_fonts\font\food.eot" />
+    <Content Include="Content\icon_fonts\font\food.ttf" />
+    <Content Include="Content\icon_fonts\font\food.woff" />
+    <Content Include="Content\icon_fonts\font\Glyphter.eot" />
+    <Content Include="Content\icon_fonts\font\Glyphter.ttf" />
+    <Content Include="Content\icon_fonts\font\Glyphter.woff" />
+    <Content Include="Scripts\assets\contact.php" />
+    <Content Include="Scripts\assets\detail_contact.php" />
+    <Content Include="Scripts\assets\newsletter.php" />
+    <Content Include="Scripts\assets\register.php" />
+    <Content Include="Scripts\assets\validate.js" />
+    <Content Include="Scripts\js\common_func.js" />
+    <Content Include="Scripts\js\common_scripts.js" />
+    <Content Include="Scripts\js\common_scripts.min.js" />
+    <Content Include="Scripts\js\isotope.min.js" />
+    <Content Include="Scripts\js\jarallax-video.min.js" />
+    <Content Include="Scripts\js\jarallax.min.js" />
+    <Content Include="Scripts\js\jquery.cookiebar.js" />
+    <Content Include="Scripts\js\jquery.nice-select.js" />
+    <Content Include="Scripts\js\jquery.nice-select.min.js" />
+    <Content Include="Scripts\js\leaflet_map\leaflet.min.js" />
+    <Content Include="Scripts\js\leaflet_map\leaflet_func.js" />
+    <Content Include="Scripts\js\leaflet_map\leaflet_half_screen_func.js" />
+    <Content Include="Scripts\js\leaflet_map\leaflet_markercluster.min.js" />
+    <Content Include="Scripts\js\leaflet_map\leaflet_markers.js" />
+    <Content Include="Scripts\js\leaflet_map\leaflet_no_mapbox_func.js" />
+    <Content Include="Scripts\js\leaflet_map\leaflet_no_mapbox_half_screen_func.js" />
+    <Content Include="Scripts\js\main_mapfull_scripts.js" />
+    <Content Include="Scripts\js\main_mapfull_scripts.min.js" />
+    <Content Include="Scripts\js\main_map_scripts.js" />
+    <Content Include="Scripts\js\mapmarker.jquery.js" />
+    <Content Include="Scripts\js\mapmarker_func.jquery.js" />
+    <Content Include="Scripts\js\modal_popup.js" />
+    <Content Include="Scripts\js\modernizr.js" />
+    <Content Include="Scripts\js\modernizr.min.js" />
+    <Content Include="Scripts\js\pw_strenght.js" />
+    <Content Include="Scripts\js\single_files\bootstrap.bundle.js" />
+    <Content Include="Scripts\js\single_files\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\js\single_files\hideShowPassword.js" />
+    <Content Include="Scripts\js\single_files\hideShowPassword.min.js" />
+    <Content Include="Scripts\js\single_files\infobox.js" />
+    <Content Include="Scripts\js\single_files\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\js\single_files\jquery-3.6.1.min.js" />
+    <Content Include="Scripts\js\single_files\jquery-ui.custom.js" />
+    <Content Include="Scripts\js\single_files\jquery-ui.custom.min.js" />
+    <Content Include="Scripts\js\single_files\jquery-ui.js" />
+    <Content Include="Scripts\js\single_files\jquery.magnific-popup.js" />
+    <Content Include="Scripts\js\single_files\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\js\single_files\lazyload.js" />
+    <Content Include="Scripts\js\single_files\lazyload.min.js" />
+    <Content Include="Scripts\js\single_files\markerclusterer.js" />
+    <Content Include="Scripts\js\single_files\owl.carousel.js" />
+    <Content Include="Scripts\js\single_files\owl.carousel.min.js" />
+    <Content Include="Scripts\js\single_files\rangeslider.js" />
+    <Content Include="Scripts\js\single_files\rangeslider.min.js" />
+    <Content Include="Scripts\js\single_files\ResizeSensor.js" />
+    <Content Include="Scripts\js\single_files\ResizeSensor.min.js" />
+    <Content Include="Scripts\js\single_files\theia-sticky-sidebar.js" />
+    <Content Include="Scripts\js\single_files\theia-sticky-sidebar.min.js" />
+    <Content Include="Scripts\js\slider.js" />
+    <Content Include="Scripts\js\specific_detail.js" />
+    <Content Include="Scripts\js\specific_listing.js" />
+    <Content Include="Scripts\js\specific_review.js" />
+    <Content Include="Scripts\js\sticky-kit.js" />
+    <Content Include="Scripts\js\sticky-kit.min.js" />
+    <Content Include="Scripts\js\sticky_sidebar.js" />
+    <Content Include="Scripts\js\sticky_sidebar.min.js" />
+    <Content Include="Scripts\js\typed.js" />
+    <Content Include="Scripts\js\typed.min.js" />
+    <Content Include="Scripts\js\vegas.js" />
+    <Content Include="Scripts\js\vegas.min.js" />
+    <Content Include="Scripts\js\video_header.js" />
+    <Content Include="Scripts\js\video_header.min.js" />
+    <Content Include="Scripts\js\wizard\jquery-ui-1.8.22.min.js" />
+    <Content Include="Scripts\js\wizard\jquery.validate.js" />
+    <Content Include="Scripts\js\wizard\jquery.wizard.js" />
+    <Content Include="Scripts\js\wizard\wizard_func.js" />
+    <Content Include="Scripts\js\wizard\wizard_scripts.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\LaCapitalMX.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Menu2023.pdf" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\manifest.json" />
+    <Content Include="Content\images\Restaurants\BBQBros\favicon\manifest.json" />
+    <Content Include="Content\images\Restaurants\JimJim\favicon\manifest.json" />
+    <Content Include="Content\images\Restaurants\LosJemos\favicon\manifest.json" />
+    <Content Include="Content\images\Restaurants\MrBeef\favicon\manifest.json" />
+    <Content Include="Content\images\Restaurants\QueenDelivery\favicon\manifest.json" />
+    <Content Include="Content\images\Restaurants\TacosP11\favicon\manifest.json" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\manifest.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Views\Home\TacosP11.cshtml" />
+    <Content Include="Views\Home\LosJemos.cshtml" />
+    <Content Include="Views\Home\MrBeef.cshtml" />
+    <Content Include="Views\Home\JimJim.cshtml" />
+    <Content Include="Views\Home\TheBBQBros.cshtml" />
+    <Content Include="Views\Home\QueenDelivery.cshtml" />
+    <Content Include="Views\Home\Index_2.cshtml" />
+    <Content Include="Views\Home\CaramelCoffee.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53493</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44362/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
