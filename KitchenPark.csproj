@@ -212,6 +212,7 @@
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-150x150.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-310x310.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\intro.mp4" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\logo.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\promo.jpeg" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\WebMenu1-8.png" />
