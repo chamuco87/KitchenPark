@@ -261,9 +261,12 @@
     <Content Include="Content\images\Restaurants\KitchenPark\LogoColor.svg" />
     <Content Include="Content\images\Restaurants\KitchenPark\mstile-150x150.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\14feb.mp4" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 1-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 1.svg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 2.svg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 3.svg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\bg1.mp4" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\bg2.mp4" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Chilaquiles-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Cubana-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Enchiladas.png" />
@@ -301,6 +304,7 @@
     <Content Include="Content\images\Restaurants\LaCapitalMX\promotion1.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\promotion2.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Tamales-8.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\WebMenu-8.png" />
     <Content Include="Content\images\Restaurants\LosJemos\1.png" />
     <Content Include="Content\images\Restaurants\LosJemos\2.png" />
     <Content Include="Content\images\Restaurants\LosJemos\3.png" />

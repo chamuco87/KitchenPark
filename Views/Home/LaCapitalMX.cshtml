@@ -10,7 +10,15 @@
     <meta name="description" content="La Capital - Tesoro Gastronomico">
     <meta name="author" content="JCarbajal">
     <title>La Capital-MX - Tesoro Gastronomico</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLT9D83LJE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-QLT9D83LJE');
+    </script>
     <!-- Favicons-->
     @*<link rel="shortcut icon" href="~/Content/images/Restaurants/KitchenPark/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" type="image/x-icon" href="~/Content/images/Restaurants/KitchenPark/favicon-32x32.png">
@@ -98,12 +106,12 @@
         </div>
     </header>
     <!-- /header -->
-    <div class="hero_single version_2 kenburns_slider" style="background: none;">
+    <div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/LaCapitalMX/bg1.mp4">
         <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
             <div class="container">
                 <div class="row justify-content-lg-start justify-content-md-center">
                     <div class="col-xl-2 col-lg-3">
-                        <img style="background-color:white" src="~/Content/images/Restaurants/LaCapitalMX/Logo.jpg" data-src="../Content/images/Restaurants/LaCapitalMX/Logo.svg" alt="" class="owl-lazy" width="150" height="150">
+                        <img src="~/Content/images/Restaurants/LaCapitalMX/Artboard 1-8.png" data-src="../Content/images/Restaurants/LaCapitalMX/Artboard 1-8.png" alt="" class="owl-lazy" width="200" height="100">
                     </div>
                     <div class="col-xl-7 col-lg-8">
                         <h1>La Capital-MX</h1>
@@ -136,12 +144,53 @@
                         </span>
                     </div>
                 </div>
-                <!-- /row -->
+            </div>
+        </div>
+        <div class="wave hero"></div>
+    </div>
+    <!--<div class="hero_single version_2 kenburns_slider" style="background: none;">
+        <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+            <div class="container">
+                <div class="row justify-content-lg-start justify-content-md-center">
+                    <div class="col-xl-2 col-lg-3">
+                        <img src="~/Content/images/Restaurants/LaCapitalMX/Artboard 1-8.png" data-src="../Content/images/Restaurants/LaCapitalMX/Artboard 1-8.png" alt="" class="owl-lazy" width="200" height="100">
+                    </div>
+                    <div class="col-xl-7 col-lg-8">
+                        <h1>La Capital-MX</h1>
+                        <p>La mejor comida del centro del país con un pequeño toque regio.</p>
+
+                    </div>
+                </div>
+                <div class="row justify-content-lg-start justify-content-md-center">
+                    <div class="col-xl-2 col-lg-3"></div>
+                    <div class="col-xl-7 col-lg-8">
+                        <span class="badge rounded-pill text-bg-secondary">Mexicana</span>
+                        <span class="badge rounded-pill text-bg-secondary">Promociones</span>
+                        <span class="badge rounded-pill text-bg-light">Chilaquiles</span>
+                        <span class="badge rounded-pill text-bg-light">Tortas</span>
+                        <span class="badge rounded-pill text-bg-light">Enchiladas</span>
+                        <span class="badge rounded-pill text-bg-light">Tacos</span>
+                        <span class="badge rounded-pill text-bg-light">Tamales</span>
+                    </div>
+                </div>
+                <div class="row justify-content-lg-start justify-content-md-center" style="padding-bottom:10px;">
+                    <div class="col-xl-2 col-lg-3"></div>
+                    <div class="col-xl-7 col-lg-8">
+                    </div>
+                </div>
+                <div class="row justify-content-lg-start justify-content-md-center">
+                    <div class="col-xl-2 col-lg-3"></div>
+                    <div class="col-xl-7 col-lg-8">
+                        <span>
+                            Ordenar:<a target="_blank" href="https://wa.me/+525565280170"><img style="width:50px" src="~/Content/images/wa.png" /></a>
+                        </span>
+                    </div>
+                </div>
             </div>
 
         </div>
         <div class="wave hero"></div>
-    </div>
+    </div>-->
     <!-- /hero_single -->
     <style>
         body, html {
@@ -196,9 +245,7 @@
             <p>Navega nuestro menu</p>
         </div>
     </div>
-    <img style="width:100%" src="~/Content/images/Restaurants/LaCapitalMX/menu1.jpg" />
-    <img style="width:100%" src="~/Content/images/Restaurants/LaCapitalMX/menu2.jpg" />
-    <img style="width:100%" src="~/Content/images/Restaurants/LaCapitalMX/menu3.jpg" />
+    <img style="width:100%" src="~/Content/images/Restaurants/LaCapitalMX/WebMenu-8.png" />
     @*</div>*@
 
     <!-- COMMON SCRIPTS -->
@@ -207,6 +254,9 @@
     <script src="~/Scripts/assets/validate.js"></script>
     <!-- SPECIFIC SCRIPTS -->
     <script src="/Scripts/js/vegas.min.js"></script>
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="/Scripts/js/jarallax.min.js"></script>
+    <script src="/Scripts/js/jarallax-video.min.js"></script>
     <script>
         $(function () {
             "use strict";
