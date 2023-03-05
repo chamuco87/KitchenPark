@@ -186,7 +186,9 @@
     <Content Include="Content\images\Restaurants\CaramelCoffee\bg1-8.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\bg2-8.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\bg3-8.png" />
-    <Content Include="Content\images\Restaurants\CaramelCoffee\demo.mp4" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\demo.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-36x36.png" />
