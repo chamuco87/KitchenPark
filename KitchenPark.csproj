@@ -189,6 +189,24 @@
     <Content Include="Content\images\Restaurants\CaramelCoffee\demo.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\images\Restaurants\CaramelCoffee\demo1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\CaramelCoffee\demo2.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\CaramelCoffee\demo3.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\CaramelCoffee\demo4.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\CaramelCoffee\demo5.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\CaramelCoffee\demo6.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\android-icon-36x36.png" />
