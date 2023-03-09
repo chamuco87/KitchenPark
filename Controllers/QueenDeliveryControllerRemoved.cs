@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace KitchenPark.Controllers
 {
-    public class QueenDeliveryController : Controller
+    public class QueenDeliveryControllerRemoved : Controller
     {
-        public ActionResult Index()
+        public ActionResult IndexRemoved()
         {
 
-            return View("~/Views/Home/QueenDelivery.cshtml");
+            return View("~/Views/Home/QueenDeliveryRemoved.cshtml");
         }
     }
 }

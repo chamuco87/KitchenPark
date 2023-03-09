@@ -74,7 +74,7 @@
                             <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
                             <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
                             <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
-                            <li>@Html.ActionLink("Queen Delivery", "Index", "QueenDelivery", null, null)</li>
+                            <li>@Html.ActionLink("Stevenson", "Index", "Stevenson", null, null)</li>
                             <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
                             <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
                             <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>
@@ -117,8 +117,8 @@
                     <div class="item">
                         <div class="strip">
                             <figure>
-                                <span class="ribbon off">Cervezas Gratis</span>
-                                <img src="~/Content/images/Restaurants/LaCapitalMX/Logo.jpg" data-src="../Content/images/Restaurants/LaCapitalMX/Logo.jpg" class="owl-lazy" alt="" width="460" height="310">
+                                <span class="ribbon off">Combos</span>
+                                <img src="~/Content/images/Restaurants/LaCapitalMX/blackLogo.png" data-src="../Content/images/Restaurants/LaCapitalMX/blackLogo.png" class="owl-lazy" alt="" width="460" height="310">
                                 <a href="/LaCapitalMx/Index" class="strip_info">
                                     <small>Mexicana</small>
                                     <div class="item_title">
@@ -139,11 +139,11 @@
                         <div class="strip">
                             <figure>
                                 <span class="ribbon off">Combos</span>
-                                <img src="~/Content/images/Restaurants/QueenDelivery/logo.jpg" data-src="../Content/images/Restaurants/QueenDelivery/logo.jpg" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/QueenDelivery/Index" class="strip_info">
-                                    <small>Variedad</small>
+                                <img src="~/Content/images/Restaurants/Stevenson/logo.png" data-src="../Content/images/Restaurants/Stevenson/logo.png" class="owl-lazy" alt="" width="460" height="310">
+                                <a href="/Stevenson/Index" class="strip_info">
+                                    <small>Mexicana</small>
                                     <div class="item_title">
-                                        <h3>Queen Delivery</h3>
+                                        <h3>Stevenson</h3>
                                         <small>Kitchen Park</small>
                                     </div>
                                 </a>
@@ -306,107 +306,48 @@
                 <p>Disfruta de nuestras promociones diarias</p>
             </div>
             <!-- /main_title -->
+            <img src="~/Content/images/Restaurants/KitchenPark/Cuponera.PNG" style="width:90%; height:auto" />
             <div class="owl-carousel owl-theme categories_carousel">
                 <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/JimJim/promo14.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/JimJim/promo14.jpeg" data-src="../Content/images/Restaurants/JimJim/promo14.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3>Colipuffs</h3>
-                                <small>2x1</small>
-                            </div>
-                        </figure>
-                    </a>
+                    @*<a href="~/Content/images/Restaurants/JimJim/promo14.jpeg">
+                    <figure>
+                        <span>$$</span>
+                        <img src="~/Content/images/Restaurants/JimJim/promo14.jpeg" data-src="../Content/images/Restaurants/JimJim/promo14.jpeg" alt="" class="owl-lazy" width="350" height="450">
+                        <div class="info">
+                            <h3>Colipuffs</h3>
+                            <small>2x1</small>
+                        </div>
+                    </figure>
+                </a>*@
                 </div>
                 <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/TacosP11/promosem.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/TacosP11/promosem.jpeg" data-src="../Content/images/Restaurants/TacosP11/promosem.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3>Descuentos</h3>
-                                <small></small>
-                            </div>
-                        </figure>
-                    </a>
+                    @*<a href="~/Content/images/Restaurants/TacosP11/promosem.jpeg">
+                    <figure>
+                        <span>$$</span>
+                        <img src="~/Content/images/Restaurants/TacosP11/promosem.jpeg" data-src="../Content/images/Restaurants/TacosP11/promosem.jpeg" alt="" class="owl-lazy" width="350" height="450">
+                        <div class="info">
+                            <h3>Descuentos</h3>
+                            <small></small>
+                        </div>
+                    </figure>
+                </a>*@
                 </div>
                 <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/MrBeef/promosem.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/MrBeef/promosem.jpeg" data-src="../Content/images/Restaurants/MrBeef/promosem.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3>Descuentos</h3>
-                                <small></small>
-                            </div>
-                        </figure>
-                    </a>
-                </div>
-                <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/QueenDelivery/promosem1.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/QueenDelivery/promosem1.jpeg" data-src="../Content/images/Restaurants/QueenDelivery/promosem1.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3></h3>
-                                <small>Combos</small>
-                            </div>
-                        </figure>
-                    </a>
-                </div>
-                <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/QueenDelivery/promosem2.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/QueenDelivery/promosem2.jpeg" data-src="../Content/images/Restaurants/QueenDelivery/promosem2.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3></h3>
-                                <small>Combos</small>
-                            </div>
-                        </figure>
-                    </a>
-                </div>
-                <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/QueenDelivery/promosem3.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/QueenDelivery/promosem3.jpeg" data-src="../Content/images/Restaurants/QueenDelivery/promosem3.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3></h3>
-                                <small>Combos</small>
-                            </div>
-                        </figure>
-                    </a>
-                </div>
-                <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/QueenDelivery/promosem4.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/QueenDelivery/promosem4.jpeg" data-src="../Content/images/Restaurants/QueenDelivery/promosem4.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3></h3>
-                                <small>Combos</small>
-                            </div>
-                        </figure>
-                    </a>
-                </div>
-                <div class="item_version_2">
-                    <a href="~/Content/images/Restaurants/QueenDelivery/promosem5.jpeg">
-                        <figure>
-                            <span>$$</span>
-                            <img src="~/Content/images/Restaurants/QueenDelivery/promosem5.jpeg" data-src="../Content/images/Restaurants/QueenDelivery/promosem5.jpeg" alt="" class="owl-lazy" width="350" height="450">
-                            <div class="info">
-                                <h3></h3>
-                                <small>Combos</small>
-                            </div>
-                        </figure>
-                    </a>
+                    @*<a href="~/Content/images/Restaurants/MrBeef/promosem.jpeg">
+                    <figure>
+                        <span>$$</span>
+                        <img src="~/Content/images/Restaurants/MrBeef/promosem.jpeg" data-src="../Content/images/Restaurants/MrBeef/promosem.jpeg" alt="" class="owl-lazy" width="350" height="450">
+                        <div class="info">
+                            <h3>Descuentos</h3>
+                            <small></small>
+                        </div>
+                    </figure>
+                </a>*@
                 </div>
             </div>
-            <video width="350" height="auto" controls loop muted autoplay style="padding-top:35px">
-                <source src="~/Content/images/Restaurants/LaCapitalMX/14feb.mp4" type="video/mp4" />
-            </video>
+            @*<video width="350" height="auto" controls loop muted autoplay style="padding-top:35px">
+            <source src="~/Content/images/Restaurants/LaCapitalMX/14feb.mp4" type="video/mp4" />
+        </video>*@
             <!-- /carousel -->
         </div>
         <!-- /container -->
@@ -414,7 +355,7 @@
 
 
         <div class="shape_element_2">
-            <div class="container margin_60_0">
+            <div class="container margin_0_0">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="row">
@@ -457,7 +398,7 @@
                                             <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
                                             <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
                                             <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
-                                            <li>@Html.ActionLink("Queen Delivery", "Index", "QueenDelivery", null, null)</li>
+                                            <li>@Html.ActionLink("Stevenson", "Index", "Stevenson", null, null)</li>
                                             <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
                                             <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
                                             <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>

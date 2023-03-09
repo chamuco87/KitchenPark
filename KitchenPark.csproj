@@ -120,8 +120,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\QueenDeliveryController.cs" />
+    <Compile Include="Controllers\QueenDeliveryControllerRemoved.cs" />
     <Compile Include="Controllers\CaramelCoffeeController.cs" />
+    <Compile Include="Controllers\StevensonController.cs" />
     <Compile Include="Controllers\TheBBQBrosController.cs" />
     <Compile Include="Controllers\JimJimController.cs" />
     <Compile Include="Controllers\LosJemosController.cs" />
@@ -275,6 +276,7 @@
     <Content Include="Content\images\Restaurants\KitchenPark\android-chrome-192x192.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\android-chrome-512x512.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\apple-touch-icon.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\Cuponera.PNG" />
     <Content Include="Content\images\Restaurants\KitchenPark\favicon-16x16.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\favicon-32x32.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\favicon.ico" />
@@ -288,9 +290,11 @@
     <Content Include="Content\images\Restaurants\LaCapitalMX\Artboard 3.svg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\bg1.mp4" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\bg2.mp4" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\blackLogo.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Chilaquiles-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Cubana-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Enchiladas.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Favicon.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\android-icon-36x36.png" />
@@ -329,6 +333,7 @@
     <Content Include="Content\images\Restaurants\LaCapitalMX\promotion2.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Tamales-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\WebMenu-8.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\whiteLogo.png" />
     <Content Include="Content\images\Restaurants\LosJemos\1.png" />
     <Content Include="Content\images\Restaurants\LosJemos\2.png" />
     <Content Include="Content\images\Restaurants\LosJemos\3.png" />
@@ -450,6 +455,12 @@
     <Content Include="Content\images\Restaurants\QueenDelivery\promosem3.jpeg" />
     <Content Include="Content\images\Restaurants\QueenDelivery\promosem4.jpeg" />
     <Content Include="Content\images\Restaurants\QueenDelivery\promosem5.jpeg" />
+    <Content Include="Content\images\Restaurants\Stevenson\1.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\2.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\3.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\logo.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\menu.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\promo.png" />
     <Content Include="Content\images\Restaurants\TacosP11\1.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\2.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\3.jpeg" />
@@ -876,9 +887,9 @@
     <Content Include="Views\Home\MrBeef.cshtml" />
     <Content Include="Views\Home\JimJim.cshtml" />
     <Content Include="Views\Home\TheBBQBros.cshtml" />
-    <Content Include="Views\Home\QueenDelivery.cshtml" />
-    <Content Include="Views\Home\Index_2.cshtml" />
+    <Content Include="Views\Home\QueenDeliveryRemoved.cshtml" />
     <Content Include="Views\Home\CaramelCoffee.cshtml" />
+    <Content Include="Views\Home\Stevenson.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

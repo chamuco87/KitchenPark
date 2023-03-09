@@ -60,10 +60,15 @@ namespace KitchenPark.Controllers
 
             return View("~/Views/Home/TheBBQBros.cshtml");
         }
-        public ActionResult QueenDelivery()
+        //public ActionResult QueenDelivery()
+        //{
+
+        //    return View("~/Views/Home/QueenDelivery.cshtml");
+        //}
+        public ActionResult Stevenson()
         {
 
-            return View("~/Views/Home/QueenDelivery.cshtml");
+            return View("~/Views/Home/Stevenson.cshtml");
         }
         public ActionResult Contact()
         {
