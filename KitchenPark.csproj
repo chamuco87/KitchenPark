@@ -317,6 +317,9 @@
     <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\ms-icon-150x150.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\ms-icon-310x310.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\LACAPITAL_PROMOCIONAL.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\Restaurants\LaCapitalMX\Logo.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Logo.svg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\menu1.jpg" />
