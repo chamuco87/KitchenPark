@@ -123,6 +123,7 @@
     <Compile Include="Controllers\QueenDeliveryControllerRemoved.cs" />
     <Compile Include="Controllers\CaramelCoffeeController.cs" />
     <Compile Include="Controllers\StevensonController.cs" />
+    <Compile Include="Controllers\CuponeraController.cs" />
     <Compile Include="Controllers\TheBBQBrosController.cs" />
     <Compile Include="Controllers\JimJimController.cs" />
     <Compile Include="Controllers\LosJemosController.cs" />
@@ -276,6 +277,7 @@
     <Content Include="Content\images\Restaurants\KitchenPark\android-chrome-192x192.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\android-chrome-512x512.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\apple-touch-icon.png" />
+    <Content Include="Content\images\Restaurants\KitchenPark\Blur.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\Cuponera.PNG" />
     <Content Include="Content\images\Restaurants\KitchenPark\favicon-16x16.png" />
     <Content Include="Content\images\Restaurants\KitchenPark\favicon-32x32.png" />
@@ -890,6 +892,8 @@
     <Content Include="Views\Home\QueenDeliveryRemoved.cshtml" />
     <Content Include="Views\Home\CaramelCoffee.cshtml" />
     <Content Include="Views\Home\Stevenson.cshtml" />
+    <Content Include="Views\Home\Cuponera.cshtml" />
+    <Content Include="Views\Home\CuponeraGood.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

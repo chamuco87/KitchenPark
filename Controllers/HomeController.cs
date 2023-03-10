@@ -70,6 +70,11 @@ namespace KitchenPark.Controllers
 
             return View("~/Views/Home/Stevenson.cshtml");
         }
+        public ActionResult Cuponera()
+        {
+
+            return View("~/Views/Home/Cuponera.cshtml");
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

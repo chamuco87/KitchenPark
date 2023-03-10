@@ -237,6 +237,16 @@
 	// Jquery select
 	$('.custom_select select').niceSelect();
 
+    function submit() {
+        var data = {
+            Id: $('#Id').val(),
+            Name: $('#Name').val(),
+            Addon: $('#Addon').is(':checked')
+        };
+
+        $.post("/Home/Form4", { sm: data }, function () { alert('Successfully Saved') });
+    }
+
 	// Accordion
 	function toggleChevron(e) {
 		$(e.target)
@@ -250,6 +260,25 @@
             .prev('.panel-heading')
             .find(".indicator")
             .toggleClass('icon_minus-06 icon_plus');
-    }
+        }
+
+
+
+    $("#send").click(function () {
+        const validateEmail = (email) => {
+            return email.match(
+                /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+        };
+
+        const email = $('#email').val();
+
+        if (validateEmail(email)) {
+
+        }
+        else {
+
+        }
+    });
 
 })(window.jQuery); 
