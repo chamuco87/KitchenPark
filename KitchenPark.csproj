@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -131,8 +139,26 @@
     <Compile Include="Controllers\TacosP11Controller.cs" />
     <Compile Include="Controllers\LaCapitalMXController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Customer.cs">
+      <DependentUpon>KitchenPark.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KitchenPark.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KitchenPark.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KitchenPark.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KitchenPark.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KitchenPark.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KitchenPark.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +181,7 @@
     <Content Include="Content\images\Restaurants\BBQBros\2.jpg" />
     <Content Include="Content\images\Restaurants\BBQBros\3.jpg" />
     <Content Include="Content\images\Restaurants\BBQBros\4.jpg" />
+    <Content Include="Content\images\Restaurants\BBQBros\Blur.png" />
     <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\BBQBros\favicon\android-icon-36x36.png" />
@@ -184,10 +211,12 @@
     <Content Include="Content\images\Restaurants\BBQBros\Logo.jpg" />
     <Content Include="Content\images\Restaurants\BBQBros\menu1.png" />
     <Content Include="Content\images\Restaurants\BBQBros\menu2.png" />
+    <Content Include="Content\images\Restaurants\BBQBros\NoBlur.png" />
     <Content Include="Content\images\Restaurants\BBQBros\Promociones.jpg" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\bg1-8.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\bg2-8.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\bg3-8.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\Blur.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\demo.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -237,11 +266,14 @@
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\ms-icon-70x70.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\intro.mp4" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\logo.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\NoBlur.png" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\promo.jpeg" />
-    <Content Include="Content\images\Restaurants\CaramelCoffee\WebMenu1-8.png" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\WebMenu1-8.jpeg" />
+    <Content Include="Content\images\Restaurants\CaramelCoffee\WebMenu1-8Old.png" />
     <Content Include="Content\images\Restaurants\JimJim\1.jpg" />
     <Content Include="Content\images\Restaurants\JimJim\2.JPG" />
     <Content Include="Content\images\Restaurants\JimJim\3.jpg" />
+    <Content Include="Content\images\Restaurants\JimJim\Blur.png" />
     <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\JimJim\favicon\android-icon-36x36.png" />
@@ -272,6 +304,7 @@
     <Content Include="Content\images\Restaurants\JimJim\menu1.png" />
     <Content Include="Content\images\Restaurants\JimJim\menu2.png" />
     <Content Include="Content\images\Restaurants\JimJim\menu3.png" />
+    <Content Include="Content\images\Restaurants\JimJim\NoBlur.png" />
     <Content Include="Content\images\Restaurants\JimJim\promo14.jpeg" />
     <Content Include="Content\images\Restaurants\JimJim\promosem1.jpeg" />
     <Content Include="Content\images\Restaurants\KitchenPark\android-chrome-192x192.png" />
@@ -293,6 +326,7 @@
     <Content Include="Content\images\Restaurants\LaCapitalMX\bg1.mp4" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\bg2.mp4" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\blackLogo.png" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\Blur.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Chilaquiles-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Cubana-8.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Enchiladas.png" />
@@ -331,6 +365,7 @@
     <Content Include="Content\images\Restaurants\LaCapitalMX\menu1.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\menu2.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\menu3.jpg" />
+    <Content Include="Content\images\Restaurants\LaCapitalMX\NoBlur.png" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\promotion1.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\promotion2.jpg" />
     <Content Include="Content\images\Restaurants\LaCapitalMX\Tamales-8.png" />
@@ -340,6 +375,7 @@
     <Content Include="Content\images\Restaurants\LosJemos\2.png" />
     <Content Include="Content\images\Restaurants\LosJemos\3.png" />
     <Content Include="Content\images\Restaurants\LosJemos\4.png" />
+    <Content Include="Content\images\Restaurants\LosJemos\Blur.png" />
     <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\LosJemos\favicon\android-icon-36x36.png" />
@@ -370,12 +406,14 @@
     <Content Include="Content\images\Restaurants\LosJemos\Menu.jpg" />
     <Content Include="Content\images\Restaurants\LosJemos\Menu2.jpg" />
     <Content Include="Content\images\Restaurants\LosJemos\Menu3.jpg" />
+    <Content Include="Content\images\Restaurants\LosJemos\NoBlur.png" />
     <Content Include="Content\images\Restaurants\LosJemos\Promo1.jpeg" />
     <Content Include="Content\images\Restaurants\LosJemos\Promo2.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\1.png" />
     <Content Include="Content\images\Restaurants\MrBeef\2.png" />
     <Content Include="Content\images\Restaurants\MrBeef\3.png" />
     <Content Include="Content\images\Restaurants\MrBeef\4.png" />
+    <Content Include="Content\images\Restaurants\MrBeef\Blur.png" />
     <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\MrBeef\favicon\android-icon-36x36.png" />
@@ -406,6 +444,7 @@
     <Content Include="Content\images\Restaurants\MrBeef\menu1.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\menu2.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\menumobile.jpg" />
+    <Content Include="Content\images\Restaurants\MrBeef\NoBlur.png" />
     <Content Include="Content\images\Restaurants\MrBeef\Promo1.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\Promo2.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\promosem.jpeg" />
@@ -460,13 +499,16 @@
     <Content Include="Content\images\Restaurants\Stevenson\1.png" />
     <Content Include="Content\images\Restaurants\Stevenson\2.png" />
     <Content Include="Content\images\Restaurants\Stevenson\3.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\Blur.png" />
     <Content Include="Content\images\Restaurants\Stevenson\logo.png" />
     <Content Include="Content\images\Restaurants\Stevenson\menu.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\NoBlur.png" />
     <Content Include="Content\images\Restaurants\Stevenson\promo.png" />
     <Content Include="Content\images\Restaurants\TacosP11\1.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\2.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\3.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\4.jpeg" />
+    <Content Include="Content\images\Restaurants\TacosP11\Blur.png" />
     <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\TacosP11\favicon\android-icon-36x36.png" />
@@ -495,6 +537,7 @@
     <Content Include="Content\images\Restaurants\TacosP11\favicon\ms-icon-70x70.png" />
     <Content Include="Content\images\Restaurants\TacosP11\logo.png" />
     <Content Include="Content\images\Restaurants\TacosP11\MenuP11.png" />
+    <Content Include="Content\images\Restaurants\TacosP11\NoBlur.png" />
     <Content Include="Content\images\Restaurants\TacosP11\promo.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\promosem.jpeg" />
     <Content Include="Content\images\ui-icons_444444_256x240.png" />
@@ -777,6 +820,16 @@
     <Content Include="Content\icon_fonts\font\Glyphter.eot" />
     <Content Include="Content\icon_fonts\font\Glyphter.ttf" />
     <Content Include="Content\icon_fonts\font\Glyphter.woff" />
+    <Content Include="KitchenPark.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KitchenPark.edmx</DependentUpon>
+      <LastGenOutput>KitchenPark.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KitchenPark.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KitchenPark.edmx</DependentUpon>
+      <LastGenOutput>KitchenPark.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\assets\contact.php" />
     <Content Include="Scripts\assets\detail_contact.php" />
     <Content Include="Scripts\assets\newsletter.php" />
@@ -882,6 +935,13 @@
     <Content Include="Content\images\Restaurants\QueenDelivery\favicon\manifest.json" />
     <Content Include="Content\images\Restaurants\TacosP11\favicon\manifest.json" />
     <Content Include="Content\images\Restaurants\CaramelCoffee\favicon\manifest.json" />
+    <EntityDeploy Include="KitchenPark.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KitchenPark.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="KitchenPark.edmx.diagram">
+      <DependentUpon>KitchenPark.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Views\Home\TacosP11.cshtml" />
@@ -894,6 +954,9 @@
     <Content Include="Views\Home\Stevenson.cshtml" />
     <Content Include="Views\Home\Cuponera.cshtml" />
     <Content Include="Views\Home\CuponeraGood.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

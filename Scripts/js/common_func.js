@@ -264,21 +264,83 @@
 
 
 
-    $("#send").click(function () {
+    $("#submit").click(function () {
+        $("#overlay").show();
         const validateEmail = (email) => {
             return email.match(
                 /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             );
         };
 
+        const validateTel = (tel) => {
+            return tel.match(
+                /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+            );
+        };
+
         const email = $('#email').val();
+        const tel = $('#tel').val();
 
-        if (validateEmail(email)) {
-
+        if (!validateEmail(email)) {
+            $("#invalidEmail").show();
         }
-        else {
-
+        if (!validateTel(tel)) {
+            $("#invalidTel").show();
         }
+
+        if (validateEmail(email) && validateTel(tel))
+        {
+            $.ajax({
+                url: "/Cuponera/Validate",
+                type: "post",
+                data: {
+                    'email': email,
+                    'tel': tel,
+                    'url': window.location.href
+                },
+                dataType: "json",
+            }).done(function (result) {
+                if (result.isSuccess) {
+                    if (window.location.href.indexOf("TacosP11") >= 0) {
+                        window.location.href = window.location.origin + "/TacosP11/Validated";
+                    }
+                    else if (window.location.href.indexOf("CaramelCoffe") >= 0) {
+                        window.location.href = window.location.origin + "/CaramelCoffee/Validated";
+                    }
+                    else if (window.location.href.indexOf("JimJim") >= 0) {
+                        window.location.href = window.location.origin + "/JimJim/Validated";
+                    }
+                    else if (window.location.href.indexOf("LaCapitalMX") >= 0 || window.location.href.indexOf("LaCapitalMx") >= 0 ) {
+                        window.location.href = window.location.origin + "/LaCapitalMX/Validated";
+                    }
+                    else if (window.location.href.indexOf("LosJemos") >= 0) {
+                        window.location.href = window.location.origin + "/LosJemos/Validated";
+                    }
+                    else if (window.location.href.indexOf("MrBeef") >= 0) {
+                        window.location.href = window.location.origin + "/MrBeef/Validated";
+                    }
+                    else if (window.location.href.indexOf("Stevenson") >= 0) {
+                        window.location.href = window.location.origin + "/Stevenson/Validated";
+                    } else if (window.location.href.indexOf("TheBBQBros") >= 0) {
+                        window.location.href = window.location.origin + "/TheBBQBros/Validated";
+                    }
+                    else {
+
+                        window.location.href = window.location.origin + "/Cuponera/Validated";
+                    }
+                    $("#overlay").hide();
+                }
+            });
+        }
+        
+
     });
 
+    $('#email').on('keypress', function () {
+        $("#invalidEmail").hide();
+    });
+
+    $('#tel').on('keypress', function () {
+        $("#invalidTel").hide();
+    });
 })(window.jQuery); 
