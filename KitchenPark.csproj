@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\OxlackController.cs" />
     <Compile Include="Controllers\QueenDeliveryControllerRemoved.cs" />
     <Compile Include="Controllers\CaramelCoffeeController.cs" />
     <Compile Include="Controllers\StevensonController.cs" />
@@ -160,10 +161,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KitchenPark.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ReservationDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationDetail.cs">
+      <DependentUpon>KitchenPark.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\blog.css" />
+    <Content Include="Content\fudo.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\contacts.css" />
@@ -448,6 +454,34 @@
     <Content Include="Content\images\Restaurants\MrBeef\Promo1.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\Promo2.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\promosem.jpeg" />
+    <Content Include="Content\images\Restaurants\Oxlack\April15thFinalSound.mp4" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-192x192.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-36x36.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-48x48.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-96x96.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\apple-icon.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\browserconfig.xml" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\favicon-16x16.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\favicon-32x32.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\favicon-96x96.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\favicon.ico" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\reserve-icon.png" />
     <Content Include="Content\images\Restaurants\QueenDelivery\1.png" />
     <Content Include="Content\images\Restaurants\QueenDelivery\2.png" />
     <Content Include="Content\images\Restaurants\QueenDelivery\3.png" />
@@ -496,6 +530,17 @@
     <Content Include="Content\images\Restaurants\QueenDelivery\promosem3.jpeg" />
     <Content Include="Content\images\Restaurants\QueenDelivery\promosem4.jpeg" />
     <Content Include="Content\images\Restaurants\QueenDelivery\promosem5.jpeg" />
+    <Content Include="Content\images\Restaurants\Oxlack\1.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\2.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\3.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\Blur.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\logo.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\menu.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\NoBlur.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\promo.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\Stevenson.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\Restaurants\Stevenson\1.png" />
     <Content Include="Content\images\Restaurants\Stevenson\2.png" />
     <Content Include="Content\images\Restaurants\Stevenson\3.png" />
@@ -504,6 +549,9 @@
     <Content Include="Content\images\Restaurants\Stevenson\menu.png" />
     <Content Include="Content\images\Restaurants\Stevenson\NoBlur.png" />
     <Content Include="Content\images\Restaurants\Stevenson\promo.png" />
+    <Content Include="Content\images\Restaurants\Stevenson\Stevenson.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\Restaurants\TacosP11\1.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\2.jpeg" />
     <Content Include="Content\images\Restaurants\TacosP11\3.jpeg" />
@@ -919,7 +967,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -942,6 +989,7 @@
     <Content Include="KitchenPark.edmx.diagram">
       <DependentUpon>KitchenPark.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\favicon\manifest.json" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Views\Home\TacosP11.cshtml" />
@@ -954,6 +1002,10 @@
     <Content Include="Views\Home\Stevenson.cshtml" />
     <Content Include="Views\Home\Cuponera.cshtml" />
     <Content Include="Views\Home\CuponeraGood.cshtml" />
+    <Content Include="Views\Home\Oxlack.cshtml" />
+    <Content Include="Views\Home\_FormDetails.cshtml" />
+    <Content Include="Views\Home\_DinnerDetails.cshtml" />
+    <Content Include="Views\Home\OxlackConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

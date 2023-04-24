@@ -1,6 +1,39 @@
+
 (function ($) {
 
 	"use strict";
+
+    var reservationDetails = {
+        name: null,
+        email: null,
+        telefono: null,
+        tableNumber: null,
+        numberOfPeople: null,
+        totalPrice: null,
+        me_reference_id : null,
+        selections: [
+            {
+                customer: 1,
+                platillo: null,
+                bebida: null
+            },
+            {
+                customer: 2,
+                platillo: null,
+                bebida: null
+            },
+            {
+                customer: 3,
+                platillo: null,
+                bebida: null
+            },
+            {
+                customer: 4,
+                platillo: null,
+                bebida: null
+            }
+        ]
+    }
 
 	// Lazy load
 	var lazyLoadInstance = new LazyLoad({
@@ -336,11 +369,236 @@
 
     });
 
-    $('#email').on('keypress', function () {
-        $("#invalidEmail").hide();
+    function bindClicks() {
+        $('#email').on('keypress', function () {
+            $("#invalidEmail").hide();
+        });
+
+        $('#tel').on('keypress', function () {
+            $("#invalidTel").hide();
+        });
+
+        $('#name').on('keypress', function () {
+            $("#invalidName").hide();
+        });
+    }
+
+    bindClicks();
+
+    $(".table").click(function () {
+        $("#overlay").show();
+        var text = (this).innerText;
+        if (text != "Sta" && text != "ge") {
+            $(".table").parent().addClass("status-normal");
+            $(".table").parent().removeClass("status-free");
+            $(this).parent().addClass("status-free")
+            $(this).parent().removeClass("status-normal");
+            $("#bookingDetails").show();
+            reservationDetails.tableNumber = $(this).attr("id");
+            $.ajax({
+                url: "/Home/GetFormDetails",
+                type: "get",
+                data: {
+                    'table': reservationDetails.tableNumber,
+                },
+            }).done(function (result) {
+                $("#bookingDetails").html(result);
+                bindNumberOfPeople();
+                bindClicks();
+                if (reservationDetails.name != null && reservationDetails.name != "") { $("#name").val(reservationDetails.name); }
+                if (reservationDetails.email != null && reservationDetails.email != "") reservationDetails.email = $("#email").val(reservationDetails.email);
+                if (reservationDetails.telefono != null && reservationDetails.telefono != "") reservationDetails.telefono = $("#tel").val(reservationDetails.telefono);
+                $("#overlay").hide();
+
+            }).fail(function (error) {
+            }); 
+        }
     });
 
-    $('#tel').on('keypress', function () {
-        $("#invalidTel").hide();
-    });
+    function bindNumberOfPeople() {
+        $("#numberOfPeople").change(function () {
+            $("#overlay").show();
+            reservationDetails.name = $("#name").val();
+            reservationDetails.email = $("#email").val();
+            reservationDetails.telefono = $("#tel").val();
+            reservationDetails.selections = [
+                {
+                    customer: 1,
+                    platillo: null,
+                    bebida: null
+                },
+                {
+                    customer: 2,
+                    platillo: null,
+                    bebida: null
+                },
+                {
+                    customer: 3,
+                    platillo: null,
+                    bebida: null
+                },
+                {
+                    customer: 4,
+                    platillo: null,
+                    bebida: null
+                }
+            ]
+            reservationDetails.numberOfPeople = $("#numberOfPeople").val();
+            $.ajax({
+                url: "/Home/GetDinnerDetails",
+                type: "get",
+                data: {
+                    'numberOfPeople': reservationDetails.numberOfPeople,
+                },
+            }).done(function (result) {
+                $("#dinnerDetails").html(result);
+                bindSelectMenu();
+                reservationDetails.totalPrice = $("#totalPrice").text().split(" ")[2];
+                
+                $("#overlay").hide();
+
+            }).fail(function (error) {
+            }); 
+        });
+    }
+
+    function bindSelectMenu() {
+        $(".platillo-selector").change(function () {
+            var persona = $(this).attr("id").split("-")[1];
+            var platillo = $(this).val();
+            $($(".platillo-invalid-feedback")[persona-1]).hide()
+            reservationDetails.selections[persona-1].platillo = platillo;
+        });
+
+        $(".bebida-selector").change(function () {
+            var persona = $(this).attr("id").split("-")[1];
+            var bebida = $(this).val();
+            reservationDetails.selections[persona-1].bebida = bebida;
+            $($(".bebida-invalid-feedback")[persona - 1]).hide()
+        });
+
+        $("#reservarBtn").click(function () {
+            $("#overlay").show();
+            var invalid = false;
+            $(".platillo-invalid-feedback").hide();
+            $(".bebida-invalid-feedback").hide();
+            for (var i = 0; i < reservationDetails.numberOfPeople; i++)
+            {
+                if (reservationDetails.selections[i].platillo == null) {
+                    invalid = true;
+                    $($(".platillo-invalid-feedback")[i]).show();
+                }
+                if (reservationDetails.selections[i].bebida == null)
+                {
+                    invalid = true;
+                    $($(".bebida-invalid-feedback")[i]).show();
+                }
+            }
+            const validateEmail = (email) => {
+                return email.match(
+                    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+            };
+
+            const validateTel = (tel) => {
+                return tel.match(
+                    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+                );
+            };
+
+            const email = $('#email').val();
+            const tel = $('#tel').val();
+
+            if (!validateEmail(email)) {
+                $("#invalidEmail").show();
+                invalid = true;
+            }
+            if (!validateTel(tel)) {
+                $("#invalidTel").show();
+                invalid = true;
+            }
+
+            if ($("#name").val() == "") {
+                $("#invalidName").show();
+                invalid = true;
+            }
+
+            if (!invalid) {
+
+                reservationDetails.name = $("#name").val();
+                reservationDetails.email = $("#email").val();
+                reservationDetails.telefono = parseInt($("#tel").val());
+                reservationDetails.totalPrice = parseInt($("#totalPrice").text().split(" ")[2]);
+                
+                $.ajax({
+                    url: "/Home/RequestPayment",
+                    type: "post",
+                    data: reservationDetails,
+                    dataType: "json",
+                }).done(function (result) {
+                    reservationDetails.me_reference_id = result.me_reference_id;
+                    const options = {
+                        method: 'POST',
+                        headers: {
+                            accept: 'application/vnd.com.payclip.v2+json',
+                            'content-type': 'application/json',
+                            'x-api-key': 'Basic M2VjNTQyMzgtMmE2Yi00MzA5LTk4NzYtMWUwMThkNjY5ZDNjOmVmMWFhNWE3LWU5ZDYtNDQ0Mi1iOWE0LTUxYWRlYTdjMjhjYg=='
+                        },
+                        body: JSON.stringify({
+                            //amount: reservationDetails.totalPrice,
+                            amount: 5,
+                            currency: 'MXN',
+                            purchase_description: 'Podcast en Vivo con Oxlack',
+                            redirection_url: {
+                                success: 'http://kitchenpark.com.mx/Home/success?me_reference_id=' + reservationDetails.me_reference_id,
+                                error: 'http://kitchenpark.com.mx/Home/error?me_reference_id=' + reservationDetails.me_reference_id,
+                                default: 'http://kitchenpark.com.mx/Home/Oxlack'
+                            },
+                            metadata: {
+                                me_reference_id: reservationDetails.me_reference_id,
+                                customer_info: { name: reservationDetails.name, email: reservationDetails.email, phone: reservationDetails.telefono  }
+                            },
+                            override_settings: {
+                                payment_method: ['CARD'],
+                                enable_tip: false,
+                                currency: { show_currency_code: true }
+                            },
+                            webhook_url: 'https://hook.us1.make.com/k5f98kqxuuxgn4td6hgejrnu6lsi362p'
+                        })
+                    };
+
+                    fetch('https://api-gw.payclip.com/checkout', options)
+                        .then(
+                            response => response.json()
+                        )
+                        .then(function (response) {
+                            $.ajax({
+                                url: "/Home/UpdateRequest",
+                                type: "post",
+                                data: {
+                                    payment_request_id: response.payment_request_id,
+                                    me_reference_id: reservationDetails.me_reference_id
+                                },
+                                dataType: "json",
+                            }).done(function (result) {
+                                if (result.success)
+                                {
+                                    window.location.href = response.payment_request_url;
+                                }
+                            });
+                            
+                        }
+                        )
+                        .catch(err => console.error(err));
+
+                });
+
+                
+            }
+            else {
+                $("#overlay").hide();
+            }
+        });
+    }
+
 })(window.jQuery); 

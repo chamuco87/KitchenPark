@@ -1,0 +1,49 @@
+﻿@model int
+
+@{
+    Layout = null;
+    int totalPrice = Model * 350;
+}
+
+@for (int a = 1; a <= Model; a++)
+{
+    <h2 class="bd-title mb-0" id="content" style="padding-top:15px;">Persona @a $350</h2> 
+    <div class="mb-3">
+        <label for="exampleInputNumber" class="form-label">Platillo</label>
+        <select id="p-@a" class="form-select platillo-selector" aria-label="Elige tu Platillo" required>
+            <option selected>Elije tu Platillo</option>
+            <option value="Chilaquiles">Chilaquiles</option>
+            <option value="Enchiladas">Enchiladas</option>
+            <option value="Torta Cubana">Torta Cubana</option>
+            <option value="Flautas">Flautas</option>
+            <option value="Barbacoa">Tacos Barbacoa</option>
+        </select>
+        <div class="platillo-invalid-feedback" style="color:red; display:none">
+            Elige tu Platillo
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputNumber" class="form-label">Bebida</label>
+        <select id="b-@a" class="form-select bebida-selector" aria-label="Elige tu Bebida" required>
+            <option selected>Elije tu Bebida</option>
+            <option value="Coca Regula">Coca Regular</option>
+            <option value="CocaSinAzucar">Coca sin Azucar</option>
+            <option value="CocaLight">Coca Light</option>
+            <option value="AguaNatural">Agua Natural</option>
+            <option value="Horchata">Horchata</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Cerveza">Cerveza</option>
+        </select>
+        <div class="bebida-invalid-feedback" style="color:red; display:none">
+            Elige tu Bebida
+        </div>
+    </div>
+
+}
+
+<h2 class="bd-title mb-0" id="totalPrice" style="padding-top:15px;">Total: $ @totalPrice</h2>
+<div>
+    <a id="reservarBtn" title="Paga con Clip">
+        <img src="https://prod-ses-email-templates-assets.s3.amazonaws.com/payment/pay-with-clip/button-logos/es/medios-de-pagos/svg/naranja_neutral_con_sombra.svg" alt="Logo Paga con Clip" />
+    </a>
+</div>

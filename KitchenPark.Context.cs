@@ -26,5 +26,6 @@ namespace KitchenPark
         }
     
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<ReservationDetail> ReservationDetails { get; set; }
     }
 }

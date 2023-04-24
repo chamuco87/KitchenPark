@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_A57E75_chamucolol87Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_A57E75_chamucolol87Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customers">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -15,11 +15,39 @@
           <Property Name="Restaurant" Type="varchar(max)" Nullable="false" />
           <Property Name="LoggedIn" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="ReservationDetails">
+          <Key>
+            <PropertyRef Name="ReservationDetailsId" />
+          </Key>
+          <Property Name="ReservationDetailsId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="me_reference_id" Type="varchar(max)" Nullable="false" />
+          <Property Name="payment_request_id" Type="varchar(max)" />
+          <Property Name="name" Type="varchar(max)" Nullable="false" />
+          <Property Name="Email" Type="varchar(max)" Nullable="false" />
+          <Property Name="Tel" Type="varchar(max)" Nullable="false" />
+          <Property Name="tableNumber" Type="int" Nullable="false" />
+          <Property Name="numberOfPeople" Type="int" Nullable="false" />
+          <Property Name="totalPrice" Type="int" Nullable="false" />
+          <Property Name="platillo1" Type="varchar(max)" Nullable="false" />
+          <Property Name="bebida1" Type="varchar(max)" Nullable="false" />
+          <Property Name="observaciones1" Type="varchar(max)" />
+          <Property Name="platillo2" Type="varchar(max)" />
+          <Property Name="bebida2" Type="varchar(max)" />
+          <Property Name="observaciones2" Type="varchar(max)" />
+          <Property Name="platillo3" Type="varchar(max)" />
+          <Property Name="bebida3" Type="varchar(max)" />
+          <Property Name="observaciones3" Type="varchar(max)" />
+          <Property Name="platillo4" Type="varchar(max)" />
+          <Property Name="bebida4" Type="varchar(max)" />
+          <Property Name="observaciones4" Type="varchar(max)" />
+          <Property Name="RequestedOn" Type="datetime" Nullable="false" />
+          <Property Name="status" Type="varchar(max)" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="DB_A57E75_chamucolol87ModelStoreContainer">
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="KitchenPark" store:Type="Tables" />
+          <EntitySet Name="ReservationDetails" EntityType="Self.ReservationDetails" Schema="KitchenPark" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_A57E75_chamucolol87Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -35,7 +63,36 @@
         </EntityType>
         <EntityContainer Name="DB_A57E75_chamucolol87Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="ReservationDetails" EntityType="DB_A57E75_chamucolol87Model.ReservationDetail" />
         </EntityContainer>
+        <EntityType Name="ReservationDetail">
+          <Key>
+            <PropertyRef Name="ReservationDetailsId" />
+          </Key>
+          <Property Name="ReservationDetailsId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="me_reference_id" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="payment_request_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tel" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tableNumber" Type="Int32" Nullable="false" />
+          <Property Name="numberOfPeople" Type="Int32" Nullable="false" />
+          <Property Name="totalPrice" Type="Int32" Nullable="false" />
+          <Property Name="platillo1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bebida1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="observaciones1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="platillo2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bebida2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="observaciones2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="platillo3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bebida3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="observaciones3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="platillo4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="bebida4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="observaciones4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RequestedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="status" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -50,6 +107,35 @@
                 <ScalarProperty Name="Tel" ColumnName="Tel" />
                 <ScalarProperty Name="Restaurant" ColumnName="Restaurant" />
                 <ScalarProperty Name="LoggedIn" ColumnName="LoggedIn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationDetails">
+            <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.ReservationDetail">
+              <MappingFragment StoreEntitySet="ReservationDetails">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="RequestedOn" ColumnName="RequestedOn" />
+                <ScalarProperty Name="observaciones4" ColumnName="observaciones4" />
+                <ScalarProperty Name="bebida4" ColumnName="bebida4" />
+                <ScalarProperty Name="platillo4" ColumnName="platillo4" />
+                <ScalarProperty Name="observaciones3" ColumnName="observaciones3" />
+                <ScalarProperty Name="bebida3" ColumnName="bebida3" />
+                <ScalarProperty Name="platillo3" ColumnName="platillo3" />
+                <ScalarProperty Name="observaciones2" ColumnName="observaciones2" />
+                <ScalarProperty Name="bebida2" ColumnName="bebida2" />
+                <ScalarProperty Name="platillo2" ColumnName="platillo2" />
+                <ScalarProperty Name="observaciones1" ColumnName="observaciones1" />
+                <ScalarProperty Name="bebida1" ColumnName="bebida1" />
+                <ScalarProperty Name="platillo1" ColumnName="platillo1" />
+                <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+                <ScalarProperty Name="numberOfPeople" ColumnName="numberOfPeople" />
+                <ScalarProperty Name="tableNumber" ColumnName="tableNumber" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="payment_request_id" ColumnName="payment_request_id" />
+                <ScalarProperty Name="me_reference_id" ColumnName="me_reference_id" />
+                <ScalarProperty Name="ReservationDetailsId" ColumnName="ReservationDetailsId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

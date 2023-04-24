@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+    
+    <div class="mb-3">
+        <label for="exampleInputNumber" class="form-label">Nombre</label>
+        <input type="text" class="form-control" name="name" id="name">
+        <div id="invalidName"class="" style="color:red; display:none">
+           Escribe tu nombre
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputNumber" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="email">
+        <div id="invalidEmail" class="" style="color:red; display:none">
+            Email invalido
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputNumber" class="form-label">Telefono</label>
+        <input type="tel" class="form-control" name="tel" id="tel" value="">
+        <div id="invalidTel"class="" style="color:red; display:none">
+            Telefono invalido
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputNumber" class="form-label">Numero de Personas</label>
+        <select id="numberOfPeople" class="form-select" aria-label="Numero de Personas">
+            <option selected>Numero de Personas</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div id="dinnerDetails" class="mb-3">
+
+    </div>
