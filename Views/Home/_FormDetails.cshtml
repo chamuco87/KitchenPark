@@ -28,10 +28,11 @@
         <label for="exampleInputNumber" class="form-label">Numero de Personas</label>
         <select id="numberOfPeople" class="form-select" aria-label="Numero de Personas">
             <option selected>Numero de Personas</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+            @for (int i = 1; i <= @ViewBag.availableSeats; i++)
+            { 
+            <option value="@i">@i</option>
+            }
+            
         </select>
     </div>
     <div id="dinnerDetails" class="mb-3">

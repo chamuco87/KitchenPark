@@ -385,14 +385,14 @@
 
     bindClicks();
 
-    $(".table").click(function () {
+    $(".status-free, .status-normal").click(function () {
         $("#overlay").show();
         var text = (this).innerText;
         if (text != "Sta" && text != "ge") {
-            $(".table").parent().addClass("status-normal");
-            $(".table").parent().removeClass("status-free");
-            $(this).parent().addClass("status-free")
-            $(this).parent().removeClass("status-normal");
+            $(".status-payment").removeClass("status-payment");
+            //$(".table").parent().addClass("status-normal");
+            //$(".table").parent().removeClass("status-free");
+            $(this).addClass("status-payment")
             $("#bookingDetails").show();
             reservationDetails.tableNumber = $(this).attr("id");
             $.ajax({
@@ -545,8 +545,8 @@
                             'x-api-key': 'Basic M2VjNTQyMzgtMmE2Yi00MzA5LTk4NzYtMWUwMThkNjY5ZDNjOmVmMWFhNWE3LWU5ZDYtNDQ0Mi1iOWE0LTUxYWRlYTdjMjhjYg=='
                         },
                         body: JSON.stringify({
-                            //amount: reservationDetails.totalPrice,
-                            amount: 5,
+                            amount: reservationDetails.totalPrice,
+                            //amount: 5,
                             currency: 'MXN',
                             purchase_description: 'Podcast en Vivo con Oxlack',
                             redirection_url: {

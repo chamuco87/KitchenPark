@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<KitchenPark.Models.TableSummary>
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -56,54 +57,54 @@
     <!-- YOUR CUSTOM CSS -->
     <link href="~/Content/custom.css" rel="stylesheet">
 </head>
-        <body>
-            <header class="header clearfix element_to_stick">
-                <div class="container">
-                    <div id="logo">
-                        <a href="@Url.Action("Index", "Home")">
-                            <img src="~/Content/images/Restaurants/KitchenPark/LOGO BLNAOC.png" width="162" height="35" alt="" class="logo_normal">
-                            <img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt="" class="logo_sticky">
-                        </a>
-                    </div>
-                    <div class="layer"></div>
-                    <ul id="top_menu">
-                        <li>@*<a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a>*@</li>
-    @*<li><a href="#0" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>*@
-    </ul>
-    <a href="#0" class="open_close">
-        <i class="icon_menu"></i><span>Menu</span>
-    </a>
-    <nav class="main-menu">
-        <div id="header_menu">
+<body>
+    <header class="header clearfix element_to_stick">
+        <div class="container">
+            <div id="logo">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/images/Restaurants/KitchenPark/LOGO BLNAOC.png" width="162" height="35" alt="" class="logo_normal">
+                    <img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt="" class="logo_sticky">
+                </a>
+            </div>
+            <div class="layer"></div>
+            <ul id="top_menu">
+                <li>@*<a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a>*@</li>
+                @*<li><a href="#0" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>*@
+            </ul>
             <a href="#0" class="open_close">
-                <i class="icon_close"></i><span>Menu</span>
+                <i class="icon_menu"></i><span>Menu</span>
             </a>
-            <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt=""></a>
-        </div>
-        <ul>
-            <li><a href="/Home/Index#restaurantes">Restaurantes</a></li>
-            <li class="submenu">
-                <a href="#0" class="show-submenu">Ordenar</a>
+            <nav class="main-menu">
+                <div id="header_menu">
+                    <a href="#0" class="open_close">
+                        <i class="icon_close"></i><span>Menu</span>
+                    </a>
+                    <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt=""></a>
+                </div>
                 <ul>
+                    <li><a href="/Home/Index#restaurantes">Restaurantes</a></li><li><a href="/Oxlack#reservar">Boletos Oxlack</a></li>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Ordenar</a>
+                        <ul>
 
-                    <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
-                    <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
-                    <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
-                    <li>@Html.ActionLink("Stevenson", "Index", "Stevenson", null, null)</li>
-                    <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
-                    <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
-                    <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>
-                    <li>@Html.ActionLink("Jim Jim", "Index", "JimJim", null, null)</li>
+                            <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
+                            <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
+                            <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
+                            
+                            <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
+                            <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
+                            <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>
+                            <li>@Html.ActionLink("Jim Jim", "Index", "JimJim", null, null)</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Home/Index#promotions">Promociones</a></li>
                 </ul>
-            </li>
-
-            <li><a href="/Home/Index#promotions">Promociones</a></li>
-        </ul>
-    </nav>
-    </div>
+            </nav>
+        </div>
     </header>
     <!--header -->
-    <div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/Oxlack/April15thFinalSound.mp4">
+    <div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/Oxlack/FinalOxlackMayo20.mp4">
         <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
             <div class="container">
                 <div class="row justify-content-lg-start justify-content-md-center">
@@ -111,7 +112,7 @@
                         <img src="~/Content/images/Restaurants/Oxlack/logo.png" data-src="../Content/images/Restaurants/Oxlack/logo.png" alt="" class="owl-lazy" width="150" height="150">
                     </div>
                     <div class="col-xl-7 col-lg-8">
-                        <h1>Oxlack en vivo - 06 de Mayo, 2023</h1>
+                        <h1>Oxlack en vivo - 20 de Mayo, 2023</h1>
                         <p>Podcast en vivo, invitado especial Pepe Carbajal.</p>
 
                     </div>
@@ -220,241 +221,265 @@
     @*<div class="row-container">
         <div class="first-row">
         </div>*@
-        <div id="reservar" class="container margin_30_60">
-            <div class="main_title center">
-                <span><em></em></span>
-                <h2 style="display:block">Reservar</h2>
-                <p>Aparta tu lugar y disfruta del evento.</p>
+<div id="reservar" class="container margin_30_60">
+    <div class="main_title center">
+        <span><em></em></span>
+        <h2 style="display:block">Reservar</h2>
+        <p>Aparta tu lugar y disfruta del evento.</p>
 
-                @*@{Html.RenderPartial("_Reservations");};*@
+        @*@{Html.RenderPartial("_Reservations");};*@
 
-            </div>
-            <!-- /main_title -->
-            <div class="content" style="font-size: calc(0.125em);">
-                <div class="table-grid" style="font-size: 6vw; height: 3em;">
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 0em;">
-                            <a id="1" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number">
-                                        <span class="ng-binding">1</span>
-                                    </div>
-                                </div>
-                            </a>
+    </div>
+    <!-- /main_title -->
+
+
+    <div class="content" style="font-size: calc(0.125em);">
+        <div class="table-grid" style="font-size: 6vw; height: 3em;">
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="1" class="table-placeholder @Model.ElementAt(0).Class " ui-sref-active="active" style="top: 1em; left: 0em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number">
+                                <span class="ng-binding">1</span>
+                            </div>
                         </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 1em;">
-                            <a id="2" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">2</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 2em;">
-                            <a   id="3" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">3</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 3em;">
-                            <a id="4" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">4</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 0em;">
-                            <a id="9" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">9</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table table="table" class="ng-scope ng-isolate-scope ">
-                        <div   class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 1em;">
-                            <a id="10" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">10</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 2em;">
-                            <a id="11" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">11</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 3em;">
-                            <a id="12" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">12</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 4em;">
-                            <a id="13" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">13</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 4em;">
-                            <a id="5" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">5</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 5em;">
-                            <a id="6" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">6</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 6em;">
-                            <a id="7" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">7</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 1em; left: 7em;">
-                            <a id="8" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">8</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div class="table-placeholder status-free table-large table-round " ui-sref-active="active" style="top: 0em; left: 3em;">
-                            <a id="Sta" class="table disabled" style="background:black">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">Sta</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div class="table-placeholder status-free table-large table-round " ui-sref-active="active" style="top: 0em; left: 4em;">
-                            <a id="ge" class="table" style="background:black">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">ge</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div  class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 5em;">
-                            <a id="14" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">14</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 6em;">
-                            <a  id="15" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">15</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
-                    <ert-table  table="table" class="ng-scope ng-isolate-scope ">
-                        <div class="table-placeholder status-free " ui-sref-active="active" style="top: 2em; left: 7em;">
-                            <a id="16" class="table">
-                                <div class="table-indicators">
-                                    <div class="table-number"><span class="ng-binding">16</span></div>
-
-
-                                </div>
-                            </a>
-                        </div>
-                    </ert-table>
-
+                    </a>
                 </div>
-                
-            </div>
-            <div id="bookingDetails" style="padding-left:22%; width:50%"></div>
+            </ert-table>
 
-            <div class="owl-carousel owl-theme categories_carousel">
-                @*<div class="item_version_2">
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="2" class="table-placeholder @Model.ElementAt(1).Class " ui-sref-active="active" style="top: 1em; left: 1em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">2</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="3" class="table-placeholder @Model.ElementAt(2).Class " ui-sref-active="active" style="top: 1em; left: 2em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">3</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="4" class="table-placeholder @Model.ElementAt(3).Class " ui-sref-active="active" style="top: 1em; left: 3em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">4</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="9" class="table-placeholder @Model.ElementAt(8).Class " ui-sref-active="active" style="top: 2em; left: 0em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">9</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="10" class="table-placeholder @Model.ElementAt(9).Class " ui-sref-active="active" style="top: 2em; left: 1em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">10</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="11" class="table-placeholder @Model.ElementAt(10).Class " ui-sref-active="active" style="top: 2em; left: 2em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">11</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="12" class="table-placeholder @Model.ElementAt(11).Class " ui-sref-active="active" style="top: 2em; left: 3em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">12</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="13" class="table-placeholder @Model.ElementAt(12).Class " ui-sref-active="active" style="top: 2em; left: 4em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">13</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="5" class="table-placeholder @Model.ElementAt(4).Class " ui-sref-active="active" style="top: 1em; left: 4em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">5</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="6" class="table-placeholder @Model.ElementAt(5).Class " ui-sref-active="active" style="top: 1em; left: 5em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">6</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="7" class="table-placeholder @Model.ElementAt(6).Class " ui-sref-active="active" style="top: 1em; left: 6em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">7</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="8" class="table-placeholder @Model.ElementAt(7).Class " ui-sref-active="active" style="top: 1em; left: 7em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">8</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="Sta" class="table-placeholder status-free table-large table-round " ui-sref-active="active" style="top: 0em; left: 3em;">
+                    <a class="table disabled" style="background:black">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">Sta</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="ge" class="table-placeholder status-free table-large table-round " ui-sref-active="active" style="top: 0em; left: 4em;">
+                    <a class="table" style="background:black">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">ge</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="14" class="table-placeholder @Model.ElementAt(14).Class " ui-sref-active="active" style="top: 2em; left: 5em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">14</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="15" class="table-placeholder @Model.ElementAt(14).Class " ui-sref-active="active" style="top: 2em; left: 6em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">15</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+            <ert-table table="table" class="ng-scope ng-isolate-scope ">
+                <div id="16" class="table-placeholder @Model.ElementAt(15).Class " ui-sref-active="active" style="top: 2em; left: 7em;">
+                    <a class="table">
+                        <div class="table-indicators">
+                            <div class="table-number"><span class="ng-binding">16</span></div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </ert-table>
+
+        </div>
+
+    </div>
+    <div id="explinations" style="padding-left:22%; width:100%">
+        <div class="row">
+            <div class="row" style="display:-webkit-inline-box">
+                <div style="background-color:#79df9d; width:20px; height:20px"></div>
+                <span>Mesa disponible</span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="row" style="display:-webkit-inline-box">
+                <div style="background-color:#FF8101; width:20px; height:20px"></div>
+                <span>Mesa con algunos lugares</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row" style="display:-webkit-inline-box">
+                <div style="background-color:#EF464D; width:20px; height:20px"></div>
+                <span>Mesa llena</span>
+            </div>
+
+        </div>
+        </div>
+    <div id="bookingDetails" style="padding-left:22%; width:50%; padding-top:10px"></div>
+
+    <div class="owl-carousel owl-theme categories_carousel">
+        @*<div class="item_version_2">
                 <a href="#sign-in-dialog" id="sign-in" class="login">
                     <figure>
                         <span>$$</span>
@@ -466,9 +491,9 @@
                     </figure>
                 </a>
             </div>*@
-            </div>
-            <!-- /carousel -->
-        </div>
+    </div>
+    <!-- /carousel -->
+</div>
     @*<div id="promotions" class="container margin_30_60">
             <div class="main_title center">
                 <span><em></em></span>
@@ -600,7 +625,7 @@
     <div id="overlay" style="display:none"> </div>
     <!-- COMMON SCRIPTS -->
     <script src="~/Scripts/js/common_scripts.min.js"></script>
-    <script src="~/Scripts/js/common_func.js?version=4.0"></script>
+    <script src="~/Scripts/js/common_func.js?version=8.0"></script>
     <script src="~/Scripts/assets/validate.js"></script>
     <!-- SPECIFIC SCRIPTS -->
     <script src="/Scripts/js/vegas.min.js"></script>
@@ -633,11 +658,11 @@
                     <h3 data-bs-target="#collapse_1">Quick Links</h3>
                     <div class="collapse dont-collapse-sm links" id="collapse_1">
                         <ul>
-                            <li><a >Sobre Nosotros</a></li>
-                            <li><a >Abre tu restaurant</a></li>
-                            <li><a >Ubicacion</a></li>
-                            <li><a >Mi cuenta></a></li>
-                            <li><a >Contactanos</a></li>
+                            <li><a>Sobre Nosotros</a></li>
+                            <li><a>Abre tu restaurant</a></li>
+                            <li><a>Ubicacion</a></li>
+                            <li><a>Mi cuenta></a></li>
+                            <li><a>Contactanos</a></li>
                         </ul>
                     </div>
                 </div>
@@ -645,9 +670,9 @@
                     <h3 data-bs-target="#collapse_2">Categorias</h3>
                     <div class="collapse dont-collapse-sm links" id="collapse_2">
                         <ul>
-                            <li><a >Restaurantes</a></li>
-                            <li><a >Promociones</a></li>
-                            <li><a >Eventos</a></li>
+                            <li><a>Restaurantes</a></li>
+                            <li><a>Promociones</a></li>
+                            <li><a>Eventos</a></li>
                         </ul>
                     </div>
                 </div>
@@ -726,7 +751,7 @@
     @*@Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")*@
     @*    @RenderSection("scripts", required: false)*@
-    </body>
+</body>
 </html>
 
 

@@ -42,6 +42,7 @@
           <Property Name="observaciones4" Type="varchar(max)" />
           <Property Name="RequestedOn" Type="datetime" Nullable="false" />
           <Property Name="status" Type="varchar(max)" Nullable="false" />
+          <Property Name="qrTicket" Type="int" />
         </EntityType>
         <EntityContainer Name="DB_A57E75_chamucolol87ModelStoreContainer">
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="KitchenPark" store:Type="Tables" />
@@ -92,6 +93,7 @@
           <Property Name="observaciones4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="RequestedOn" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="status" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="qrTicket" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -113,6 +115,7 @@
           <EntitySetMapping Name="ReservationDetails">
             <EntityTypeMapping TypeName="DB_A57E75_chamucolol87Model.ReservationDetail">
               <MappingFragment StoreEntitySet="ReservationDetails">
+                <ScalarProperty Name="qrTicket" ColumnName="qrTicket" />
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="RequestedOn" ColumnName="RequestedOn" />
                 <ScalarProperty Name="observaciones4" ColumnName="observaciones4" />

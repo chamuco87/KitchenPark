@@ -37,5 +37,6 @@ namespace KitchenPark
         public string observaciones4 { get; set; }
         public System.DateTime RequestedOn { get; set; }
         public string status { get; set; }
+        public Nullable<int> qrTicket { get; set; }
     }
 }

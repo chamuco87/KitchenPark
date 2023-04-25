@@ -84,7 +84,7 @@
                     <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt=""></a>
                 </div>
                 <ul>
-                    <li><a href="/Home/Index#restaurantes">Restaurantes</a></li>
+                    <li><a href="/Home/Index#restaurantes">Restaurantes</a></li><li><a href="/Oxlack#reservar">Boletos Oxlack</a></li>
                     <li class="submenu">
                         <a href="#0" class="show-submenu">Ordenar</a>
                         <ul>
@@ -92,7 +92,7 @@
                             <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
                             <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
                             <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
-                            <li>@Html.ActionLink("Stevenson", "Index", "Stevenson", null, null)</li>
+
                             <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
                             <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
                             <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>
@@ -106,7 +106,8 @@
         </div>
     </header>
     <!-- /header -->
-    <div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/LaCapitalMX/LACAPITAL_PROMOCIONAL.mp4">
+    @*<div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/LaCapitalMX/LACAPITAL_PROMOCIONAL.mp4">*@
+    <div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/Oxlack/FinalOxlackMayo20.mp4">
         <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
             <div class="container">
                 <div class="row justify-content-lg-start justify-content-md-center">
@@ -224,43 +225,18 @@
     @*<div class="row-container">
         <div class="first-row">
         </div>*@
-    <div id="promotions" class="container margin_30_60">
-        <div class="main_title center">
-            <span><em></em></span>
-            <h2>Cupon</h2>
-            <p>Descarga nuestro cupon para un descuento especial.</p>
-        </div>
-        <!-- /main_title -->
-        <div class="owl-carousel owl-theme categories_carousel">
-            <div class="item_version_2">
-                <a href="#sign-in-dialog" id="sign-in" class="login">
-                    <figure>
-                        <span>$$</span>
-                        <img src="~/Content/images/Restaurants/LaCapitalMX/Blur.png" data-src="../Content/images/Restaurants/LaCapitalMX/Blur.png" alt="" class="owl-lazy" width="350" height="450">
-                        <div class="info">
-                            <h3>Cupon Especial</h3>
-                            <small></small>
-                        </div>
-                    </figure>
-                </a>
-            </div>
-        </div>
-        <!-- /carousel -->
+<div id="promotions" class="container margin_30_60">
+    <div class="main_title center">
+        <span><em></em></span>
+        <h2>Proximo Evento</h2>
+        <p>Podcast con Oxlack Castro en Vivo.</p>
     </div>
-    <div id="promotions" class="container margin_30_60">
-        <div class="main_title center">
-            <span><em></em></span>
-            <h2>Promociones</h2>
-            <p>Disfruta de nuestras promociones diarias</p>
-        </div>
-        <!-- /main_title -->
-        @*<div class="owl-carousel owl-theme categories_carousel">
-                <video width="350" height="auto" controls loop muted autoplay>
-                    <source src="~/Content/images/Restaurants/LaCapitalMX/14feb.mp4" type="video/mp4" />
-                </video>
-            </div>*@
-        <!-- /carousel -->
-    </div>
+    <a href="/Oxlack"><img src="~/Content/images/Restaurants/Oxlack/Artboard 2-8.png" style="width:100%" /></a>
+    <!-- /main_title -->
+    
+    <!-- /carousel -->
+</div>
+    
     <div id="promotions" class="container margin_30_60">
         <div class="main_title center">
             <span><em></em></span>

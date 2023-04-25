@@ -81,7 +81,7 @@
             <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt=""></a>
         </div>
         <ul>
-            <li><a href="/Home/Index#restaurantes">Restaurantes</a></li>
+            <li><a href="/Home/Index#restaurantes">Restaurantes</a></li><li><a href="/Oxlack#reservar">Boletos Oxlack</a></li>
             <li class="submenu">
                 <a href="#0" class="show-submenu">Ordenar</a>
                 <ul>
@@ -89,7 +89,7 @@
                     <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
                     <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
                     <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
-                    <li>@Html.ActionLink("Stevenson", "Index", "Stevenson", null, null)</li>
+                    
                     <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
                     <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
                     <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>
@@ -103,7 +103,7 @@
     </div>
     </header>
     <!--header -->
-    <div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/Oxlack/April15thFinalSound.mp4">
+    <div class="hero_single jarallax" data-jarallax-video="mp4:../Content/images/Restaurants/Oxlack/FinalOxlackMayo20.mp4">
         <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
             <div class="container">
                 <div class="row justify-content-lg-start justify-content-md-center">
@@ -111,7 +111,7 @@
                         <img src="~/Content/images/Restaurants/Oxlack/logo.png" data-src="../Content/images/Restaurants/Oxlack/logo.png" alt="" class="owl-lazy" width="150" height="150">
                     </div>
                     <div class="col-xl-7 col-lg-8">
-                        <h1>Oxlack en vivo - 06 de Mayo, 2023</h1>
+                        <h1>Oxlack en vivo - 20 de Mayo, 2023</h1>
                         <p>Podcast en vivo, invitado especial Pepe Carbajal.</p>
 
                     </div>
@@ -223,9 +223,14 @@
         <div id="reservar" class="container margin_30_60">
             <div class="main_title center">
                 <span><em></em></span>
+                @if (ViewBag.Body.IndexOf("encontrada") < 0)
+                {
                 <h2 style="display:block">Felicidades</h2>
                 <p>Ya tienes tu entrada garantizada, tus boletos llegaran a tu correo.</p>
                 <p>Te esperamos.</p>
+                }
+
+                @Html.Raw(ViewBag.Body);
                 @*@{Html.RenderPartial("_Reservations");};*@
 
             </div>
@@ -378,7 +383,7 @@
     <div id="overlay" style="display:none"> </div>
     <!-- COMMON SCRIPTS -->
     <script src="~/Scripts/js/common_scripts.min.js"></script>
-    <script src="~/Scripts/js/common_func.js?version=2.0"></script>
+    <script src="~/Scripts/js/common_func.js?version=8.0"></script>
     <script src="~/Scripts/assets/validate.js"></script>
     <!-- SPECIFIC SCRIPTS -->
     <script src="/Scripts/js/vegas.min.js"></script>

@@ -9626,8 +9626,8 @@ li.active .room-count {
     }
 
     .table-placeholder.status-payment .table {
-        color: #4747B5;
-        background: #428df1
+        color: #4747B5!important;
+        background: #428df1!important;
     }
 
         .table-placeholder.status-payment .table:hover {

@@ -24,4 +24,11 @@ namespace KitchenPark.Models
         public string platillo { get; set; }
         public string bebida { get; set; }
     }
+
+    public class TableSummary
+    {
+        public int TableNumber { get; set; }
+        public int Occupied { get; set; }
+        public string Class { get; set; }
+    }
 }

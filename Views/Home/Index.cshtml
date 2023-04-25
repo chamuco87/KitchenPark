@@ -67,14 +67,14 @@
                     <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt=""></a>
                 </div>
                 <ul>
-                    <li><a href="/Home/Index#restaurantes">Restaurantes</a></li>
+                    <li><a href="/Home/Index#restaurantes">Restaurantes</a></li><li><a href="/Oxlack#reservar">Boletos Oxlack</a></li>
                     <li class="submenu">
                         <a href="#0" class="show-submenu">Ordenar</a>
                         <ul>
                             <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
                             <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
                             <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
-                            <li>@Html.ActionLink("Stevenson", "Index", "Stevenson", null, null)</li>
+
                             <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
                             <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
                             <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>
@@ -105,6 +105,7 @@
     </div>
     <!-- /hero_single -->
     <main>
+        <a href="/Oxlack"><img src="~/Content/images/Restaurants/Oxlack/Artboard 2-8.png" style="width:100%" /></a>
         <div id="restaurantes" class="bg_gray">
             <div class="container margin_60">
                 <div class="main_title">
@@ -117,7 +118,7 @@
                     <div class="item">
                         <div class="strip">
                             <figure>
-                                <span class="ribbon off">Combos</span>
+                                <span class="ribbon off">Oxlack</span>
                                 <img src="~/Content/images/Restaurants/LaCapitalMX/blackLogo.png" data-src="../Content/images/Restaurants/LaCapitalMX/blackLogo.png" class="owl-lazy" alt="" width="460" height="310">
                                 <a href="/LaCapitalMx/Index" class="strip_info">
                                     <small>Mexicana</small>
@@ -138,12 +139,12 @@
                     <div class="item">
                         <div class="strip">
                             <figure>
-                                <span class="ribbon off">Combos</span>
-                                <img src="~/Content/images/Restaurants/Stevenson/logo.png" data-src="../Content/images/Restaurants/Stevenson/logo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/Stevenson/Index" class="strip_info">
-                                    <small>Mexicana</small>
+                                <span class="ribbon off">Promociones</span>
+                                <img src="~/Content/images/Restaurants/CaramelCoffee/logo.png" data-src="../Content/images/Restaurants/CaramelCoffee/logo.png" class="owl-lazy" alt="" width="460" height="310">
+                                <a href="/CaramelCoffee/Index" class="strip_info">
+                                    <small>Coffee</small>
                                     <div class="item_title">
-                                        <h3>Stevenson</h3>
+                                        <h3>Caramel Coffee</h3>
                                         <small>Kitchen Park</small>
                                     </div>
                                 </a>
@@ -186,7 +187,7 @@
                     <div class="item">
                         <div class="strip">
                             <figure>
-                                <span class="ribbon off">2x1 Bonelitros</span>
+                                <span class="ribbon off">Cervezas</span>
                                 <img src="~/Content/images/Restaurants/LosJemos/logo.png" data-src="../Content/images/Restaurants/LosJemos/logo.png" class="owl-lazy" alt="" width="460" height="310">
                                 <a href="/LosJemos/Index" class="strip_info">
                                     <small>Tacos, Burgers and More.</small>
@@ -272,27 +273,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Promociones</span>
-                                <img src="~/Content/images/Restaurants/CaramelCoffee/logo.png" data-src="../Content/images/Restaurants/CaramelCoffee/logo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/CaramelCoffee/Index" class="strip_info">
-                                    <small>Coffee</small>
-                                    <div class="item_title">
-                                        <h3>Caramel Coffee</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
                 <!-- /carousel -->
             </div>
@@ -402,7 +383,7 @@
                                             <li>@Html.ActionLink("La Capital-MX", "Index", "LaCapitalMx", null, null)</li>
                                             <li>@Html.ActionLink("Caramel Coffee", "Index", "CaramelCoffee", null, null)</li>
                                             <li>@Html.ActionLink("Mr. Beef", "Index", "MrBeef", null, null)</li>
-                                            <li>@Html.ActionLink("Stevenson", "Index", "Stevenson", null, null)</li>
+
                                             <li>@Html.ActionLink("Los Jemos", "Index", "LosJemos", null, null)</li>
                                             <li>@Html.ActionLink("Tacos P11", "Index", "TacosP11", null, null)</li>
                                             <li>@Html.ActionLink("The BBQ Bros", "Index", "TheBBQBros", null, null)</li>
@@ -475,7 +456,7 @@
     <div id="overlay" style="display:none"> </div>
     <!-- COMMON SCRIPTS -->
     <script src="~/Scripts/js/common_scripts.min.js"></script>
-    <script src="~/Scripts/js/common_func.js?version=2.0"></script>
+    <script src="~/Scripts/js/common_func.js?version=9.0"></script>
     <script src="~/Scripts/assets/validate.js"></script>
     <!-- SPECIFIC SCRIPTS -->
     <script src="/Scripts/js/vegas.min.js"></script>
@@ -484,6 +465,10 @@
             "use strict";
             $('.kenburns_slider').vegas({
                 slides: [
+                    { src: '../../Content/images/Restaurants/Oxlack/index1.PNG' },
+                    { src: '../../Content/images/Restaurants/Oxlack/index2.PNG' },
+                    { src: '../../Content/images/Restaurants/Oxlack/index3.PNG' },
+                    { src: '../../Content/img/slides/slide_home_2.jpg' }, ,
                     { src: '../../Content/img/slides/slide_home_1.jpg' },
                     { src: '../../Content/img/slides/slide_home_2.jpg' },
                     { src: '../../Content/img/slides/slide_home_3.jpg' }

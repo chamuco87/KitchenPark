@@ -454,7 +454,7 @@
     <Content Include="Content\images\Restaurants\MrBeef\Promo1.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\Promo2.jpeg" />
     <Content Include="Content\images\Restaurants\MrBeef\promosem.jpeg" />
-    <Content Include="Content\images\Restaurants\Oxlack\April15thFinalSound.mp4" />
+    <Content Include="Content\images\Restaurants\Oxlack\Artboard 2-8.png" />
     <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-144x144.png" />
     <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-192x192.png" />
     <Content Include="Content\images\Restaurants\Oxlack\favicon\android-icon-36x36.png" />
@@ -481,7 +481,88 @@
     <Content Include="Content\images\Restaurants\Oxlack\favicon\ms-icon-150x150.png" />
     <Content Include="Content\images\Restaurants\Oxlack\favicon\ms-icon-310x310.png" />
     <Content Include="Content\images\Restaurants\Oxlack\favicon\ms-icon-70x70.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\FinalOxlackMayo20.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\index1.PNG" />
+    <Content Include="Content\images\Restaurants\Oxlack\index2.PNG" />
+    <Content Include="Content\images\Restaurants\Oxlack\index3.PNG" />
     <Content Include="Content\images\Restaurants\Oxlack\reserve-icon.png" />
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox1.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox10.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox11.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox12.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox13.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox14.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox15.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox16.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox17.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox18.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox19.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox2.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox20.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox21.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox22.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox23.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox24.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox25.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox3.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox4.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox5.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox6.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox7.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox8.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\Restaurants\Oxlack\Tickets\Ox9.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\Restaurants\QueenDelivery\1.png" />
     <Content Include="Content\images\Restaurants\QueenDelivery\2.png" />
     <Content Include="Content\images\Restaurants\QueenDelivery\3.png" />
