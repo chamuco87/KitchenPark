@@ -1,6 +1,8 @@
-﻿@{
+﻿@model Dictionary<int, string>
+@{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +69,8 @@
                     <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/Restaurants/KitchenPark/LogoColor.svg" width="162" height="35" alt=""></a>
                 </div>
                 <ul>
-                    <li><a href="/Home/Index#restaurantes">Restaurantes</a></li><li><a href="/Oxlack#reservar">Boletos Oxlack</a></li>
+                    <li><a href="/Home/Index#restaurantes">Restaurantes</a></li>
+                    <li><a href="/Oxlack#reservar">Boletos Oxlack</a></li>
                     <li class="submenu">
                         <a href="#0" class="show-submenu">Ordenar</a>
                         <ul>
@@ -115,168 +118,17 @@
                     @*<a href="#0">View All</a>*@
                 </div>
                 <div class="owl-carousel owl-theme carousel_4">
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Oxlack</span>
-                                <img src="~/Content/images/Restaurants/LaCapitalMX/blackLogo.png" data-src="../Content/images/Restaurants/LaCapitalMX/blackLogo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/LaCapitalMx/Index" class="strip_info">
-                                    <small>Mexicana</small>
-                                    <div class="item_title">
-                                        <h3>La Capital-MX</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Promociones</span>
-                                <img src="~/Content/images/Restaurants/CaramelCoffee/logo.png" data-src="../Content/images/Restaurants/CaramelCoffee/logo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/CaramelCoffee/Index" class="strip_info">
-                                    <small>Coffee</small>
-                                    <div class="item_title">
-                                        <h3>Caramel Coffee</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Combos</span>
-                                <img src="~/Content/images/Restaurants/MrBeef/logo.png" data-src="../Content/images/Restaurants/MrBeef/logo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/MrBeef/Index" class="strip_info">
-                                    <small>Burgers Texas Style</small>
-                                    <div class="item_title">
-                                        <h3>Mr. Beef</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
+                    @{Html.RenderPartial(Model[1]);}
+                    @{Html.RenderPartial(Model[2]);}
+                    @{Html.RenderPartial(Model[3]);}
+                    @{Html.RenderPartial(Model[4]);}
+                    @{Html.RenderPartial(Model[5]);}
+                    @{Html.RenderPartial(Model[6]);}
+                    @{Html.RenderPartial(Model[7]);}
                 </div>
                 <!-- /carousel -->
             </div>
-            <div class="container margin_60">
-                <div class="owl-carousel owl-theme carousel_4">
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Cervezas</span>
-                                <img src="~/Content/images/Restaurants/LosJemos/logo.png" data-src="../Content/images/Restaurants/LosJemos/logo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/LosJemos/Index" class="strip_info">
-                                    <small>Tacos, Burgers and More.</small>
-                                    <div class="item_title">
-                                        <h3>Los Jemos</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Combos</span>
-                                <img src="~/Content/images/Restaurants/TacosP11/logo.png" data-src="../Content/images/Restaurants/TacosP11/logo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/TacosP11/Index" class="strip_info">
-                                    <small>Tacos y mas.</small>
-                                    <div class="item_title">
-                                        <h3>Tacos P11</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Combos</span>
-                                <img src="~/Content/images/Restaurants/BBQBros/Logo.jpg" data-src="../Content/images/Restaurants/BBQBros/Logo.jpg" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/TheBBQBros/Index" class="strip_info">
-                                    <small>Texas BBQ.</small>
-                                    <div class="item_title">
-                                        <h3>The BBQ Bros</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- /carousel -->
-            </div>
-            <div class="container margin_60">
-                <div class="owl-carousel owl-theme carousel_4">
-                    <div class="item">
-                        <div class="strip">
-                            <figure>
-                                <span class="ribbon off">Combos</span>
-                                <img src="~/Content/images/Restaurants/JimJim/logo.png" data-src="../Content/images/Restaurants/JimJim/logo.png" class="owl-lazy" alt="" width="460" height="310">
-                                <a href="/JimJim/Index" class="strip_info">
-                                    <small>Vegana.</small>
-                                    <div class="item_title">
-                                        <h3>Jim Jim</h3>
-                                        <small>Kitchen Park</small>
-                                    </div>
-                                </a>
-                            </figure>
-                            <ul>
-                                <li><span class="take yes">Dine-in</span> <span class="deliv yes">Delivery</span> <span class="take yes">Take Out</span></li>
-                                <li>
-                                    @*<div class="score"><strong>8.9</strong></div>*@
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /carousel -->
-            </div>
+            
         </div>
         <!-- /bg_gray -->
 
@@ -455,7 +307,7 @@
     <!-- /main -->
     <div id="overlay" style="display:none"> </div>
     <!-- COMMON SCRIPTS -->
-    <script src="~/Scripts/js/common_scripts.min.js"></script>
+    <script src="~/Scripts/js/common_scripts.js"></script>
     <script src="~/Scripts/js/common_func.js?version=9.0"></script>
     <script src="~/Scripts/assets/validate.js"></script>
     <!-- SPECIFIC SCRIPTS -->

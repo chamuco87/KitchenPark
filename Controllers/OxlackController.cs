@@ -130,7 +130,7 @@ namespace KitchenPark.Controllers
         public ActionResult GetFormDetails(int table)
         {
             var availableSeats = 4;
-            var record = db.ReservationDetails.Where(m => m.tableNumber == table).ToList();
+            var record = db.ReservationDetails.Where(m => m.tableNumber == table && m.status == "Confirmed/Paid").ToList();
             if (record.Count > 0)
             {
                 var numberOfPeople = record.Sum(u => u.numberOfPeople);

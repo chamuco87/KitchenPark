@@ -1087,6 +1087,13 @@
     <Content Include="Views\Home\_FormDetails.cshtml" />
     <Content Include="Views\Home\_DinnerDetails.cshtml" />
     <Content Include="Views\Home\OxlackConfirmation.cshtml" />
+    <Content Include="Views\Home\_LaCapitalMXOption.cshtml" />
+    <Content Include="Views\Home\_CaramelCoffeeOption.cshtml" />
+    <Content Include="Views\Home\_MrBeefOption.cshtml" />
+    <Content Include="Views\Home\_LosJemosOption.cshtml" />
+    <Content Include="Views\Home\_TacosP11Option.cshtml" />
+    <Content Include="Views\Home\_TheBQQBrosOption.cshtml" />
+    <Content Include="Views\Home\_JimJimOption.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

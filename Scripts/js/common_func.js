@@ -601,4 +601,24 @@
         });
     }
 
+
+    function BindResizeEvent() {
+        $(window).on("resize", function () {
+            resizeIt();
+        });
+    }
+
+    function resizeIt() {
+        $(".owl-stage").css("width", "auto");
+        $(".owl-item").addClass("col-sm-4")
+        $(".owl-stage").addClass("row");
+        $(".owl-stage").removeClass("owl-stage");
+        $(".owl-item").removeClass("owl-item");
+        $(".owl-stage-outer").addClass("row");
+        $(".owl-stage-outer").removeClass("owl-stage-outer");
+    }
+
+    resizeIt()
+    BindResizeEvent();
+
 })(window.jQuery); 

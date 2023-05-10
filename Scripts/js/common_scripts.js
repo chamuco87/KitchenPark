@@ -2236,7 +2236,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 			if (typeof option == 'string' && option.charAt(0) !== '_') {
 				data[option].apply(data, args);
 			}
-		});
+        });
+
 	};
 
 	/**

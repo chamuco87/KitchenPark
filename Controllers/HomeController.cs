@@ -16,15 +16,30 @@ namespace KitchenPark.Controllers
         {
             string view = "";
             Random random = new Random();
-            var n = random.Next(0, 2);
-            if (n == 0)
+            Dictionary<int, string> order = new Dictionary<int, string>();
+            List<string> restaurants = new List<string>();
+            restaurants.Add("_LaCapitalMXOption");
+            restaurants.Add("_CaramelCoffeeOption");
+            restaurants.Add("_MrBeefOption");
+            restaurants.Add("_JimJimOption");
+            restaurants.Add("_TheBQQBrosOption");
+            restaurants.Add("_LosJemosOption");
+            restaurants.Add("_TacosP11Option");
+
+            int index = 0;
+            while (order.Count() < 7)
             {
-                view = "~/Views/Home/Index.cshtml";
+                var n = random.Next(1, 8);
+
+                try {
+                        order.Add(n,restaurants[index]);
+                        index++;
+                    }
+                catch{ }
             }
-            else {
-                view = "~/Views/Home/Index.cshtml";
-            }
-            return View(view);
+
+            
+            return View(view, order);
         }
 
         public ActionResult LaCapitalMX()
@@ -110,7 +125,7 @@ namespace KitchenPark.Controllers
         public ActionResult GetFormDetails(int table)
         {
             var availableSeats = 4;
-            var record = db.ReservationDetails.Where(m => m.tableNumber == table).ToList();
+            var record = db.ReservationDetails.Where(m => m.tableNumber == table && m.status == "Confirmed/Paid").ToList();
             if (record.Count > 0)
             {
                 var numberOfPeople = record.Sum(u => u.numberOfPeople);
